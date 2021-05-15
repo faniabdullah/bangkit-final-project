@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">SkinSkan</string>
+    <string name="google_maps_key">AIzaSyA80lJdVEMJIcPm-uIBBO45LP5PcS9S8Po</string>
+    <string name="title_analitycs">Analityc</string>
+    <string name="title_articles">Article</string>
+    <string name="take_image">Take Image</string>
+    <string name="upload_image">Upload Image</string>
+    <string name="test">test</string>
+    <string name="result">Result</string>
+    <string name="process">Process</string>
+    <string name="resultin">90%</string>
+    <string name="resultsub">Cancer</string>
+    <string name="see_more_result">see more result</string>
+    <string name="catatan">Catatan</string>
+    <string name="catatanSub">Kamu disarankan untuk segera ke rumah sakit , untuk memastikan dan mendapat perawatan pertama dengan
+cepat. </string>
+    <string name="judul_article">Judul Article</string>
+    <string name="sub_article">This cat suffered from skin cancer after he ate humans ..</string>
+    <string name="_10_mins">10 mins</string>
+
+    <string name="analytic">Analytic Result</string>
+    <string name="berikut_rumah_sakit_terdekat_tools">Berikut Rumah Sakit Terdekat</string>
+</resources>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_analitycs">
+
+    <fragment
+        android:id="@+id/navigation_analitycs"
+        android:name="com.bangkit.skinskan.ui.analytics.AnalyticsFragment"
+        android:label="@string/title_analitycs"
+        tools:layout="@layout/fragment_analitycs" />
+
+    <fragment
+        android:id="@+id/navigation_articles"
+        android:name="com.bangkit.skinskan.ui.article.ArticlesFragment"
+        android:label="@string/title_articles"
+        tools:layout="@layout/fragment_articles" />
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.bangkit.skinskan.ui.detail.DetailActivity"
+        android:label="fragment_detail"
+        tools:layout="@layout/activity_detail" />
+    <fragment
+        android:id="@+id/nearByFragment"
+        android:name="com.bangkit.skinskan.ui.nearby.NearByActivity"
+        android:label="fragment_detail_nearby"
+        tools:layout="@layout/activity_detail_nearby" />
+    <fragment
+        android:id="@+id/detailResultFragment"
+        android:name="com.bangkit.skinskan.ui.detail.detail_result.DetailResultActivity"
+        android:label="fragment_detail_result"
+        tools:layout="@layout/activity_detail_result" />
+
+</navigation>
