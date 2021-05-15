@@ -6,12 +6,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.bangkit.skinskan.databinding.FragmentArticlesBinding
 
 class ArticlesFragment : Fragment() {
 
-    private lateinit var dashboardViewModel: ArticlesViewModel
+    private lateinit var articleViewModel: ArticlesViewModel
     private var _binding: FragmentArticlesBinding? = null
+    private lateinit var adapter: ArticleAdapter
 
     private val binding get() = _binding!!
 
@@ -20,12 +22,28 @@ class ArticlesFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        dashboardViewModel =
+        articleViewModel =
             ViewModelProvider(this).get(ArticlesViewModel::class.java)
-
         _binding = FragmentArticlesBinding.inflate(inflater, container, false)
 
         return binding.root
+    }
+
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        adapter = ArticleAdapter()
+        adapter.notifyDataSetChanged()
+
+        binding.apply {
+            rvArticle.layoutManager = LinearLayoutManager(context)
+            rvArticle.setHasFixedSize(true)
+            rvArticle.adapter = adapter
+        }
+        articleViewModel = ViewModelProvider(this).get(ArticlesViewModel::class.java)
+        val dataArticle = articleViewModel.resultArticle
+        adapter.setList(dataArticle)
+        adapter.notifyDataSetChanged()
     }
 
     override fun onDestroyView() {
