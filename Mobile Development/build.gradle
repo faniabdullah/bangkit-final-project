@@ -17,6 +17,10 @@ buildscript {
     }
 }
 
+ext{
+    pagingVersion = '2.1.1'
+}
+
 allprojects {
     repositories {
         google()

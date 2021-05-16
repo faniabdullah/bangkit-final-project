@@ -8,20 +8,13 @@ import androidx.room.PrimaryKey
 import kotlinx.parcelize.Parcelize
 
 
-@Entity(tableName = "tb_article")
+@Entity(tableName = "tb_photo")
 @Parcelize
-data class ArticleEntity(
+data class PhotoEntity (
+
     @PrimaryKey
     @NonNull
-    @ColumnInfo(name = "id")
-    val id: String,
+    @ColumnInfo(name = "photoId")
+    val photoId: String
 
-    @ColumnInfo(name = "title")
-    val title: String,
-
-    @ColumnInfo(name = "description")
-    val description: String,
-
-    @ColumnInfo(name = "release_date")
-    val release_date: String,
 ) : Parcelable
