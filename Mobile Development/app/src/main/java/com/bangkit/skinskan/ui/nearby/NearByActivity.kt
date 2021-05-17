@@ -3,36 +3,32 @@
 package com.bangkit.skinskan.ui.nearby
 
 import android.Manifest
-import android.annotation.SuppressLint
 import android.content.pm.PackageManager
 import android.location.Criteria
 import android.location.Location
 import android.location.LocationListener
 import android.location.LocationManager
-import android.os.AsyncTask
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
+import androidx.lifecycle.ViewModelProvider
 import com.bangkit.skinskan.R
+import com.bangkit.skinskan.data.source.local.entity.MapsEntity
 import com.bangkit.skinskan.databinding.ActivityDetailNearbyBinding
+import com.bangkit.skinskan.utils.ViewModelFactory
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
-import org.json.JSONObject
-import java.io.BufferedReader
-import java.io.InputStream
-import java.io.InputStreamReader
-import java.net.HttpURLConnection
-import java.net.URL
-import java.util.*
 
 class NearByActivity : AppCompatActivity(), LocationListener {
     private lateinit var binding: ActivityDetailNearbyBinding
     var mGoogleMap: GoogleMap? = null
+    private lateinit var nearByViewModel: NearByViewModel
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityDetailNearbyBinding.inflate(layoutInflater)
@@ -43,6 +39,7 @@ class NearByActivity : AppCompatActivity(), LocationListener {
             mGoogleMap = googleMap
             initMap()
         }
+
 
     }
 
@@ -81,104 +78,43 @@ class NearByActivity : AppCompatActivity(), LocationListener {
         val latLng = LatLng(mLatitude, mLongitude)
         mGoogleMap!!.moveCamera(CameraUpdateFactory.newLatLng(latLng))
         mGoogleMap!!.animateCamera(CameraUpdateFactory.zoomTo(12f))
-        val sb = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?" +
-                "location=" + mLatitude + "," + mLongitude +
-                "&radius=20000" +
-                "&types=hospital" +
-                "&key=" + resources.getString(R.string.google_maps_key)
-        PlacesTask().execute(sb)
-
+//        val sb = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?" +
+//                "location=" + mLatitude + "," + mLongitude +
+//                "&radius=20000" +
+//                "&types=hospital" +
+//                "&key=" + resources.getString(R.string.google_maps_key)
+        setObserber(mLatitude, mLongitude)
     }
 
-    @SuppressLint("StaticFieldLeak")
-    private inner class PlacesTask :
-        AsyncTask<String?, Int?, String?>() {
+    private fun setObserber(mLatitude: Double, mLongitude: Double) {
+        val factory = ViewModelFactory.getInstance()
+        nearByViewModel = ViewModelProvider(this, factory)[NearByViewModel::class.java]
 
-        override fun onPostExecute(result: String?) {
-            ParserTask().execute(result)
-        }
-
-        override fun doInBackground(vararg url: String?): String? {
-            var data: String? = null
-
-            try {
-                data = url[0]?.let { downloadUrl(it) }
-
-                Log.e("data result Api", " error message" + data)
-            } catch (e: Exception) {
-                e.printStackTrace()
-            }
-            return data
-
-        }
-
+        nearByViewModel.getHospitalNearBy(mLatitude.toString(), mLongitude.toString())
+            .observe(this, {
+                    displayMarker(it)
+            })
     }
 
-    private fun downloadUrl(strUrl: String): String {
-        var data = ""
-        val iStream: InputStream
-        val urlConnection: HttpURLConnection
-        try {
-            val url = URL(strUrl)
-            urlConnection = url.openConnection() as HttpURLConnection
-            urlConnection.connect()
-            iStream = urlConnection.inputStream
-            val br = BufferedReader(InputStreamReader(iStream))
-            val sb = StringBuilder()
-            var line: String?
-            while (br.readLine().also { line = it } != null) {
-                sb.append(line)
-            }
-            data = sb.toString()
-            br.close()
-            iStream.close()
-            urlConnection.disconnect()
-        } catch (e: Exception) {
-            e.printStackTrace()
-        }
-        return data
-    }
+    private fun displayMarker(data: List<MapsEntity>) {
+        mGoogleMap!!.clear()
 
-    @SuppressLint("StaticFieldLeak")
-    private inner class ParserTask :
-        AsyncTask<String?, Int?, List<HashMap<String, String>>?>() {
-        var jObject: JSONObject? = null
-
-        override fun onPostExecute(list: List<HashMap<String, String>>?) {
-            mGoogleMap!!.clear()
-            for (i in list!!.indices) {
-                val markerOptions = MarkerOptions()
-                val hmPlace = list[i]
-                val pinDrop =
-                    BitmapDescriptorFactory.fromResource(R.drawable.ic_baseline_pin_drop_24)
-                val lat = hmPlace["lat"]!!.toDouble()
-                val lng = hmPlace["lng"]!!.toDouble()
-                val namePlace = hmPlace["place_name"]
-                val nameStreet = hmPlace["vicinity"]
-                val latLng = LatLng(lat, lng)
-                markerOptions.icon(pinDrop)
-                markerOptions.position(latLng)
-                markerOptions.title("$namePlace : $nameStreet")
-                mGoogleMap!!.addMarker(markerOptions)
-
-            }
-        }
-
-        override fun doInBackground(vararg params: String?): List<HashMap<String, String>>? {
-            var places: List<HashMap<String, String>>? = null
-            val parserPlace = ParserPlace()
-            try {
-                jObject = JSONObject(params[0].toString())
-                places = parserPlace.parse(jObject!!)
-            } catch (e: Exception) {
-                e.printStackTrace()
-            }
-            return places
+        Log.e("data","MARKER")
+        for (response in data) {
+            val markerOptions = MarkerOptions()
+            val pinDrop =
+                BitmapDescriptorFactory.fromResource(R.drawable.ic_pin)
+            val lat = response.latitude
+            val lng = response.lng
+            val namePlace = response.namePlace
+            val nameStreet = response.nameStreet
+            val latLng = LatLng(lat, lng)
+            markerOptions.icon(pinDrop)
+            markerOptions.position(latLng)
+            markerOptions.title("$namePlace : $nameStreet")
+            mGoogleMap!!.addMarker(markerOptions)
         }
     }
 
-    override fun onStatusChanged(s: String, i: Int, bundle: Bundle) {}
-    override fun onProviderEnabled(s: String) {}
-    override fun onProviderDisabled(s: String) {}
 
 }
