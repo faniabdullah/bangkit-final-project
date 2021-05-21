@@ -23,8 +23,8 @@
     | Actinic keratoses | AKIEC | 0 |
     | Basal cell carcinoma | BCC | 1 |
     | Benign keratosis-like lesions | BKL | 2 |
-    | Melanocytic nevi | NV | 4 |
-    | Melanoma | MEL | 5 | 
+    | Melanocytic nevi | NV | 3 |
+    | Melanoma | MEL | 4 | 
 
     <br>
 
@@ -32,9 +32,9 @@
 
     | Label Name | Label Alias | Label Number |
     |------------|-------------|--------------|
-    | Benign keratosis-like lesions | BKL | 2 |
-    | Melanocytic nevi | NV | 4 |
-    | Melanoma | MEL | 5 | 
+    | Benign keratosis-like lesions | BKL | 1 |
+    | Melanocytic nevi | NV | 2 |
+    | Melanoma | MEL | 3 | 
 
     <br>
 
