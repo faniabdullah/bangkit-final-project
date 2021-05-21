@@ -32,9 +32,9 @@
 
     | Label Name | Label Alias | Label Number |
     |------------|-------------|--------------|
-    | Benign keratosis-like lesions | BKL | 1 |
-    | Melanocytic nevi | NV | 2 |
-    | Melanoma | MEL | 3 | 
+    | Benign keratosis-like lesions | BKL | 0 |
+    | Melanocytic nevi | NV | 1 |
+    | Melanoma | MEL | 2 | 
 
     <br>
 
