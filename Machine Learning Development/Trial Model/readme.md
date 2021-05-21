@@ -6,7 +6,7 @@ There is 4 Method for Classification with using same datasets but with different
   https://www.kaggle.com/kmader/skin-cancer-mnist-ham10000
   <br>
  
- This datasets contains of 10000 picture of Skin disease with 7 Classes, but we divided it into 7,5,3 and 2 Classes. Here we using Machine Learning with Tensorflow as framework to Classify the skin disease by using transfer learning Xception, here is the Labels, Modified Datasets and also Saved Model (*.h5 format): 
+ This datasets contains of 10000 picture of Skin disease with 7 Classes with Melanoma is Malignant (Deadliest Cancer) and else is Benign (Not Deadliest Cancer), but we divided it into 7,5,3 and 2 Classes. Here we using Machine Learning with Tensorflow as framework to Classify the skin disease by using transfer learning Xception, here is the Labels, Modified Datasets and also Saved Model (*.h5 format): 
 
 
 - Label of Classification
