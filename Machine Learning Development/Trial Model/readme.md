@@ -2,7 +2,7 @@
 
 - Label of Classification
     <br>
-    - 7 Classes <br>
+    - 7 Classes <br> <br>
 
     | Label Name | Label Alias | Label Number |
     |------------|-------------|--------------|
@@ -16,7 +16,7 @@
 
     <br>
 
-   - 5 Classes <br>
+   - 5 Classes <br> <br>
 
     | Label Name | Label Alias | Label Number |
     |------------|-------------|--------------|
@@ -28,7 +28,7 @@
 
     <br>
 
-   - 3 Classes <br>
+   - 3 Classes <br> <br>
 
     | Label Name | Label Alias | Label Number |
     |------------|-------------|--------------|
