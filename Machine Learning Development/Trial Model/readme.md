@@ -54,7 +54,7 @@ There is 3 Method for Classification with using same datasets but with different
   - For 3 Classes: <br> https://drive.google.com/file/d/127GzJ-ymLp6GJ-SBGRIQ6O0UMFU0hciU/view
 
 - Saved Model from Training (with Keras *.h5 Format): 
-  - For 7 Classes (97.12% Accuracy Score): <br> https://drive.google.com/file/d/1-4HGDErWwQbvMERzcOWU8RSvN9Y7xxqu/view?usp=sharing 
-  - For 5 Classes (97.42% Accuracy Score): <br> https://drive.google.com/file/d/13uKS9-9caD2DkXVbphIeGKbOpwuIzE8p/view?usp=sharing
-  - For 3 Classes (98.39% Accuracy Score): <br> https://drive.google.com/file/d/1jCNrjU7lvV2oAplerSM3mxEvLQxsweER/view?usp=sharing
+  - For 7 Classes (97.12% Accuracy Score with using Xception transfer learning, Adam optimizer, and softmax activation function): <br> https://drive.google.com/file/d/1-4HGDErWwQbvMERzcOWU8RSvN9Y7xxqu/view?usp=sharing 
+  - For 5 Classes (97.42% Accuracy Score with using Xception transfer learning, Adam optimizer, and softmax activation function): <br> https://drive.google.com/file/d/13uKS9-9caD2DkXVbphIeGKbOpwuIzE8p/view?usp=sharing
+  - For 3 Classes (98.39% Accuracy Score with using Xception transfer learning, Adam optimizer, and sigmoid activation function): <br> https://drive.google.com/file/d/1jCNrjU7lvV2oAplerSM3mxEvLQxsweER/view?usp=sharing
 
