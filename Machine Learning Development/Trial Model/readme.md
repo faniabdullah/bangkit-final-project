@@ -55,6 +55,6 @@ There is 3 Method for Classification with using same datasets but with different
 
 - Saved Model from Training (with Keras *.h5 Format): 
   - For 7 Classes (97.12% Accuracy Score): <br> https://drive.google.com/file/d/1-4HGDErWwQbvMERzcOWU8RSvN9Y7xxqu/view?usp=sharing 
-  - For 5 Classes (91.67% Accuracy Score): <br> https://drive.google.com/file/d/13jdQ4VVanKUl40IRpZNaDFfK0-YmNG4X/view?usp=sharing
-  - For 3 Classes (95.03% Accuracy Score): <br> https://drive.google.com/file/d/16U54U2sCJQCQtLuhFGKLX_rzQ9cQLv94/view?usp=sharing
+  - For 5 Classes (97.42% Accuracy Score): <br> https://drive.google.com/file/d/13uKS9-9caD2DkXVbphIeGKbOpwuIzE8p/view?usp=sharing
+  - For 3 Classes (98.39% Accuracy Score): <br> https://drive.google.com/file/d/1jCNrjU7lvV2oAplerSM3mxEvLQxsweER/view?usp=sharing
 
