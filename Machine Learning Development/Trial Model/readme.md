@@ -85,5 +85,5 @@ There is 4 Method for Classification with using same datasets but with different
   - For 5 Classes: <br> https://colab.research.google.com/drive/1Q2euYsu8JeRCeBug8Rq5Fpf3htG4A7f-#scrollTo=188HRGXvnAGD
   - For 3 Classes: <br> https://colab.research.google.com/drive/1zqd7YBTCgPJt9keE0s_E7rg0toZX09ks?authuser=3#scrollTo=h-uQ6q7ZWVGr
   - For 2 Classes: <br> https://colab.research.google.com/drive/1cOl4ck-uhdHogjwtDxkvJQjDWEqB09nk?authuser=3#scrollTo=h-uQ6q7ZWVGr
-  - For antoher 2 Classes: <br> https://colab.research.google.com/drive/1jYAhXByVsM00mKK3Bzm8IO7nRR0na_wy?authuser=3#scrollTo=o52Wz27RSBk_
+  - For another 2 Classes: <br> https://colab.research.google.com/drive/1jYAhXByVsM00mKK3Bzm8IO7nRR0na_wy?authuser=3#scrollTo=o52Wz27RSBk
 
