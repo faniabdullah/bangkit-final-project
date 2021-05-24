@@ -87,5 +87,5 @@ There is 4 Method for Classification with using same datasets but with different
   - For 3 Classes: <br> https://colab.research.google.com/drive/1zqd7YBTCgPJt9keE0s_E7rg0toZX09ks
   - For 2 Classes: <br> https://colab.research.google.com/drive/1cOl4ck-uhdHogjwtDxkvJQjDWEqB09nk
   - For another 2 Classes: <br> https://colab.research.google.com/drive/1jYAhXByVsM00mKK3Bzm8IO7nRR0na_wy
-  - For another 2 Classes with different (299x299) input_size: <br> https://colab.research.google.com/drive/1IxN386vN8CzD_Ya2QpN2fZmSv5FdSfAB?authuser=3
+  - For another 2 Classes with different (299x299) input_size: <br> https://colab.research.google.com/drive/1IxN386vN8CzD_Ya2QpN2fZmSv5FdSfAB
 
