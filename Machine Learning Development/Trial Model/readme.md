@@ -82,10 +82,10 @@ There is 4 Method for Classification with using same datasets but with different
   - For Another 2 Classes with different (299x299) input_size  (97% Accuracy Score but unfortunately only get 85% to Val_Accuracy Score with using Xception transfer learning, Adam optimizer, and sigmoid activation function): <br> https://drive.google.com/file/d/1UY4Et1v6M1c6oqBoOkwAkAnq4aESSnkI/view?usp=sharing
 
 - Link to Colab: 
-  - For 7 Classes: <br> https://colab.research.google.com/drive/1uZok6x_hqwiDW6L72qwRA6Z-9k4Yyj3f?authuser=3#scrollTo=X5pRod37ZpTM
-  - For 5 Classes: <br> https://colab.research.google.com/drive/1Q2euYsu8JeRCeBug8Rq5Fpf3htG4A7f-#scrollTo=188HRGXvnAGD
-  - For 3 Classes: <br> https://colab.research.google.com/drive/1zqd7YBTCgPJt9keE0s_E7rg0toZX09ks?authuser=3#scrollTo=h-uQ6q7ZWVGr
-  - For 2 Classes: <br> https://colab.research.google.com/drive/1cOl4ck-uhdHogjwtDxkvJQjDWEqB09nk?authuser=3#scrollTo=h-uQ6q7ZWVGr
-  - For another 2 Classes: <br> https://colab.research.google.com/drive/1jYAhXByVsM00mKK3Bzm8IO7nRR0na_wy?authuser=3#scrollTo=o52Wz27RSBk
-  - For another 2 Classes with different (299x299) input_size: <br> https://colab.research.google.com/drive/1IxN386vN8CzD_Ya2QpN2fZmSv5FdSfAB?authuser=3#scrollTo=L_YNqWlHtg1U
+  - For 7 Classes: <br> https://colab.research.google.com/drive/1uZok6x_hqwiDW6L72qwRA6Z-9k4Yyj3f
+  - For 5 Classes: <br> https://colab.research.google.com/drive/1Q2euYsu8JeRCeBug8Rq5Fpf3htG4A7f-
+  - For 3 Classes: <br> https://colab.research.google.com/drive/1zqd7YBTCgPJt9keE0s_E7rg0toZX09ks
+  - For 2 Classes: <br> https://colab.research.google.com/drive/1cOl4ck-uhdHogjwtDxkvJQjDWEqB09nk
+  - For another 2 Classes: <br> https://colab.research.google.com/drive/1jYAhXByVsM00mKK3Bzm8IO7nRR0na_wy
+  - For another 2 Classes with different (299x299) input_size: <br> https://colab.research.google.com/drive/1IxN386vN8CzD_Ya2QpN2fZmSv5FdSfAB?authuser=3
 
