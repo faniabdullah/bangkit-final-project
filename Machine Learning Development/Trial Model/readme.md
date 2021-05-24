@@ -78,8 +78,8 @@ There is 4 Method for Classification with using same datasets but with different
   - For 5 Classes (97.42% Accuracy Score with using Xception transfer learning, Adam optimizer, and softmax activation function): <br> https://drive.google.com/file/d/13uKS9-9caD2DkXVbphIeGKbOpwuIzE8p/view?usp=sharing
   - For 3 Classes (98.39% Accuracy Score with using Xception transfer learning, Adam optimizer, and sigmoid activation function): <br> https://drive.google.com/file/d/1jCNrjU7lvV2oAplerSM3mxEvLQxsweER/view?usp=sharing
   - For 2 Classes (96.77% Accuracy Score with using Xception transfer learning, Adam optimizer, and sigmoid activation function): <br> https://drive.google.com/file/d/1-AcxUa8EREHXKB8njEpU7DrMUhVcNFXq/view?usp=sharing
-  - For Another 2 Classes (97.02% Accuracy Score and 91.2% Val_Accuracy Score with using Xception transfer learning, Adam optimizer, and sigmoid activation function): <br> https://drive.google.com/file/d/1-0ODyEWBJcERmvXXM5Ejk_VoxV7gI6SW/view?usp=sharing
-  - For Another 2 Classes with different (299x299) input_size  (97.02% Accuracy Score and 91.2% Val_Accuracy Score with using Xception transfer learning, Adam optimizer, and sigmoid activation function): <br> https://drive.google.com/file/d/1UY4Et1v6M1c6oqBoOkwAkAnq4aESSnkI/view?usp=sharing
+  - For Another 2 Classes (98.02% Accuracy Score and 91.2% Val_Accuracy Score with using Xception transfer learning, Adam optimizer, and sigmoid activation function): <br> https://drive.google.com/file/d/1-0ODyEWBJcERmvXXM5Ejk_VoxV7gI6SW/view?usp=sharing
+  - For Another 2 Classes with different (299x299) input_size  (97% Accuracy Score but unfortunately only get 85% to Val_Accuracy Score with using Xception transfer learning, Adam optimizer, and sigmoid activation function): <br> https://drive.google.com/file/d/1UY4Et1v6M1c6oqBoOkwAkAnq4aESSnkI/view?usp=sharing
 
 - Link to Colab: 
   - For 7 Classes: <br> https://colab.research.google.com/drive/1uZok6x_hqwiDW6L72qwRA6Z-9k4Yyj3f?authuser=3#scrollTo=X5pRod37ZpTM
