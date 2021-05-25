@@ -38,3 +38,9 @@
   
   Here we using Machine Learning with Tensorflow as framework to Classify the skin disease, here is the Saved Model (*.h5 format) with 98.02% Accuracy Score and 91.2% Val_Accuracy Score with using Xception transfer learning, Adam optimizer, and sigmoid activation function): <br> https://drive.google.com/file/d/1-0ODyEWBJcERmvXXM5Ejk_VoxV7gI6SW/view?usp=sharing
 
+<br>
+
+  If you curious with this model, you can visit the colab:
+    - Load_Models: <br> colab.research.google.com/drive/1pkckJod5uwbcDkVAgC16spk0MBV75usw
+    - Skin_Cancer_Detection: <br> colab.research.google.com/drive/1EYhFL717FUyu_vZ7_Mmh0kJ_XZfzgVUe
+    - Converting_Datasets: <br> colab.research.google.com/drive/1LsXVGeixr3VzgMzpBS0bUAGg7uFoqBHA
