@@ -41,6 +41,6 @@
 <br>
 
   If you curious with this model, you can visit the colab:
-    - Load_Models: <br> colab.research.google.com/drive/1pkckJod5uwbcDkVAgC16spk0MBV75usw
-    - Skin_Cancer_Detection: <br> colab.research.google.com/drive/1EYhFL717FUyu_vZ7_Mmh0kJ_XZfzgVUe
-    - Converting_Datasets: <br> colab.research.google.com/drive/1LsXVGeixr3VzgMzpBS0bUAGg7uFoqBHA
+    - Load_Models: <br> https://colab.research.google.com/drive/1pkckJod5uwbcDkVAgC16spk0MBV75usw
+    - Skin_Cancer_Detection: <br> https://colab.research.google.com/drive/1EYhFL717FUyu_vZ7_Mmh0kJ_XZfzgVUe
+    - Converting_Datasets: <br> https://colab.research.google.com/drive/1LsXVGeixr3VzgMzpBS0bUAGg7uFoqBHA
