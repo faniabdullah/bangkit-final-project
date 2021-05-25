@@ -18,53 +18,53 @@ There is 4 Method for Classification with using same datasets but with different
 
    | Label Name | Label Alias | Label Number |
    |------------|-------------|--------------|
-    | Actinic keratoses | AKIEC | 0 |
-    | Basal cell carcinoma | BCC | 1 |
-    | Benign keratosis-like lesions | BKL | 2 |
-    | Dermatofibroma | DF | 3 |
-    | Melanocytic nevi | NV | 4 |
-    | Melanoma | MEL | 5 | 
-    | Vascular lesion | VASC | 6 |
+   | Actinic keratoses | AKIEC | 0 |
+   | Basal cell carcinoma | BCC | 1 |
+   | Benign keratosis-like lesions | BKL | 2 |
+   | Dermatofibroma | DF | 3 |
+   | Melanocytic nevi | NV | 4 |
+   | Melanoma | MEL | 5 | 
+   | Vascular lesion | VASC | 6 |
 
    <br>
 
    - 5 Classes <br> <br>
 
    | Label Name | Label Alias | Label Number |
-    |------------|-------------|--------------|
-    | Actinic keratoses | AKIEC | 0 |
-    | Basal cell carcinoma | BCC | 1 |
-    | Benign keratosis-like lesions | BKL | 2 |
-    | Melanocytic nevi | NV | 3 |
-    | Melanoma | MEL | 4 | 
+   |------------|-------------|--------------|
+   | Actinic keratoses | AKIEC | 0 |
+   | Basal cell carcinoma | BCC | 1 |
+   | Benign keratosis-like lesions | BKL | 2 |
+   | Melanocytic nevi | NV | 3 |
+   | Melanoma | MEL | 4 | 
 
    <br>
 
    - 3 Classes <br> <br>
 
    | Label Name | Label Alias | Label Number |
-    |------------|-------------|--------------|
-    | Benign keratosis-like lesions | BKL | 0 |
-    | Melanocytic nevi | NV | 1 |
-    | Melanoma | MEL | 2 | 
+   |------------|-------------|--------------|
+   | Benign keratosis-like lesions | BKL | 0 |
+   | Melanocytic nevi | NV | 1 |
+   | Melanoma | MEL | 2 | 
 
    <br>
     
    - 2 Classes <br> <br>
 
    | Label Name | Label Alias | Label Number |
-    |------------|-------------|--------------|
-    | Melanocytic nevi | NV | 0 |
-    | Melanoma | MEL | 1 | 
+   |------------|-------------|--------------|
+   | Melanocytic nevi | NV | 0 |
+   | Melanoma | MEL | 1 | 
 
    <br>
     
    - Another 2 Classes <br> <br>
 
    | Label Name | Label Alias | Label Number |
-    |------------|-------------|--------------|
-    | Benign | Benign | 0 |
-    | Malignant | Malignant | 1 | 
+   |------------|-------------|--------------|
+   | Benign | Benign | 0 |
+   | Malignant | Malignant | 1 | 
 
    <br>
 
