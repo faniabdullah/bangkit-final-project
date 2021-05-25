@@ -36,7 +36,7 @@
 
   <br>
   
-  Here we using Machine Learning with Tensorflow as framework to Classify the skin disease, here is the Saved Model (*.h5 format) with 98.02% Accuracy Score and 91.2% Val_Accuracy Score with using Xception transfer learning, Adam optimizer, and sigmoid activation function): <br> https://drive.google.com/file/d/1-7G_h3rknh1ceKO_Fpx4lmwqk-kVo3MV/view
+  Here we using Machine Learning with Tensorflow as framework to Classify the skin disease, here is the Saved Model (*.h5 format) with 98.02% Accuracy Score and 91.2% Val_Accuracy Score with using Xception transfer learning, Adam optimizer, and sigmoid activation function): <br> https://drive.google.com/file/d/1-0ODyEWBJcERmvXXM5Ejk_VoxV7gI6SW/view
 
 <br>
 
