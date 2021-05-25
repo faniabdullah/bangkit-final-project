@@ -14,7 +14,7 @@ There is 4 Method for Classification with using same datasets but with different
 # Label of Classification
     
    <br>
-    - 7 Classes <br> <br>
+   - 7 Classes <br> <br>
 
    | Label Name | Label Alias | Label Number |
    |------------|-------------|--------------|
