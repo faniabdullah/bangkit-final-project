@@ -12,11 +12,12 @@ There is 4 Method for Classification with using same datasets but with different
 
 
 # Label of Classification
-    <br>
+    
+   <br>
     - 7 Classes <br> <br>
 
-    | Label Name | Label Alias | Label Number |
-    |------------|-------------|--------------|
+   | Label Name | Label Alias | Label Number |
+   |------------|-------------|--------------|
     | Actinic keratoses | AKIEC | 0 |
     | Basal cell carcinoma | BCC | 1 |
     | Benign keratosis-like lesions | BKL | 2 |
@@ -25,11 +26,11 @@ There is 4 Method for Classification with using same datasets but with different
     | Melanoma | MEL | 5 | 
     | Vascular lesion | VASC | 6 |
 
-    <br>
+   <br>
 
    - 5 Classes <br> <br>
 
-    | Label Name | Label Alias | Label Number |
+   | Label Name | Label Alias | Label Number |
     |------------|-------------|--------------|
     | Actinic keratoses | AKIEC | 0 |
     | Basal cell carcinoma | BCC | 1 |
@@ -37,35 +38,35 @@ There is 4 Method for Classification with using same datasets but with different
     | Melanocytic nevi | NV | 3 |
     | Melanoma | MEL | 4 | 
 
-    <br>
+   <br>
 
    - 3 Classes <br> <br>
 
-    | Label Name | Label Alias | Label Number |
+   | Label Name | Label Alias | Label Number |
     |------------|-------------|--------------|
     | Benign keratosis-like lesions | BKL | 0 |
     | Melanocytic nevi | NV | 1 |
     | Melanoma | MEL | 2 | 
 
-    <br>
+   <br>
     
-    - 2 Classes <br> <br>
+   - 2 Classes <br> <br>
 
-    | Label Name | Label Alias | Label Number |
+   | Label Name | Label Alias | Label Number |
     |------------|-------------|--------------|
     | Melanocytic nevi | NV | 0 |
     | Melanoma | MEL | 1 | 
 
-    <br>
+   <br>
     
-    - Another 2 Classes <br> <br>
+   - Another 2 Classes <br> <br>
 
-    | Label Name | Label Alias | Label Number |
+   | Label Name | Label Alias | Label Number |
     |------------|-------------|--------------|
     | Benign | Benign | 0 |
     | Malignant | Malignant | 1 | 
 
-    <br>
+   <br>
 
 
 # Modified Dataset: 
