@@ -40,7 +40,7 @@
 
 <br>
 
-  If you curious with this model, you can visit the colab:
+  If you curious with this model, you can visit the colab: <br>
   Load_Models: <br> https://colab.research.google.com/drive/1pkckJod5uwbcDkVAgC16spk0MBV75usw <br>
   Skin_Cancer_Detection: <br> https://colab.research.google.com/drive/1EYhFL717FUyu_vZ7_Mmh0kJ_XZfzgVUe <br>
   Converting_Datasets: <br> https://colab.research.google.com/drive/1LsXVGeixr3VzgMzpBS0bUAGg7uFoqBHA 
