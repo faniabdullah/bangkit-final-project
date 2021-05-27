@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.article.ArticleDetailFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/articleIV"
+            android:layout_width="match_parent"
+            android:layout_height="305dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/avatar_1"/>
+
+        <LinearLayout
+            android:layout_width="350dp"
+            android:layout_marginTop="280dp"
+            android:layout_marginLeft="30dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:background="@drawable/rectangle">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/title_articles"
+                android:textSize="30sp"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tvAuthor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/author"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/tvDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/article_date"/>
+            
+            <TextView
+                android:id="@+id/tvContent"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rectangle_gray"
+                android:text="@string/lorem"
+                android:layout_marginTop="20dp"/>
+
+
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+
+</ScrollView>
