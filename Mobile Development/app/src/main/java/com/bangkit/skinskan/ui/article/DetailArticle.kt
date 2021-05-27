@@ -10,8 +10,8 @@ class DetailArticle : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityArticleDetailBinding.inflate(layoutInflater)
-        setContentView(binding.root)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        setContentView(binding.root)
     }
 
     override fun onSupportNavigateUp(): Boolean {

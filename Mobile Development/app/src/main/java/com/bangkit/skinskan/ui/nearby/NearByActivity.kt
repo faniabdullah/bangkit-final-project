@@ -32,8 +32,9 @@ class NearByActivity : AppCompatActivity(), LocationListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityDetailNearbyBinding.inflate(layoutInflater)
-        setContentView(binding.root)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        setContentView(binding.root)
+
         val fragment =
             supportFragmentManager.findFragmentById(R.id.fmap) as SupportMapFragment
         fragment.getMapAsync { googleMap ->

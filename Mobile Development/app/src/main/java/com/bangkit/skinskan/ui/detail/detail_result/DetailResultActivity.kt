@@ -11,10 +11,17 @@ class DetailResultActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityDetailResultBinding.inflate(layoutInflater)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
         setContentView(binding.root)
         binding.seeMoretBtn.setOnClickListener{
             val intent = Intent(this, NearByActivity::class.java)
             startActivity(intent)
         }
+    }
+
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
 }
