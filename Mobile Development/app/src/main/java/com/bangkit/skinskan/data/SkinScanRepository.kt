@@ -50,6 +50,4 @@ class SkinScanRepository private constructor(private val remoteDataSource: Remot
 
         return movieResult
     }
-
-
 }

@@ -33,6 +33,7 @@ class NearByActivity : AppCompatActivity(), LocationListener {
         super.onCreate(savedInstanceState)
         binding = ActivityDetailNearbyBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
         val fragment =
             supportFragmentManager.findFragmentById(R.id.fmap) as SupportMapFragment
         fragment.getMapAsync { googleMap ->
@@ -116,5 +117,9 @@ class NearByActivity : AppCompatActivity(), LocationListener {
         }
     }
 
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
+    }
 
 }
