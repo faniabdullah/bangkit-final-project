@@ -61,6 +61,10 @@ class AnalyticsFragment : Fragment() {
             )
         }
 
+     showCaseAnalitycs()
+    }
+
+    private fun showCaseAnalitycs() {
         MaterialShowcaseView.Builder(activity)
             .setTarget(binding.camBtn)
             .setDismissText("GOT IT")
