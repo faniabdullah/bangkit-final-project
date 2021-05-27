@@ -15,7 +15,8 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.bangkit.skinskan.databinding.FragmentAnalitycsBinding
 import com.bangkit.skinskan.ui.detail.DetailActivity
-import uk.co.deanwild.materialshowcaseview.MaterialShowcaseView
+import uk.co.deanwild.materialshowcaseview.MaterialShowcaseSequence
+import uk.co.deanwild.materialshowcaseview.ShowcaseConfig
 import java.io.ByteArrayOutputStream
 import java.io.IOException
 
@@ -29,6 +30,7 @@ class AnalyticsFragment : Fragment() {
     companion object {
         const val REQUEST_IMAGE_CAPTURE = 1
         const val SELECT_PICTURE = 2
+        const val SHOWCASE_ID = "SHOWCASE_ID_1"
     }
 
     override fun onCreateView(
@@ -61,17 +63,28 @@ class AnalyticsFragment : Fragment() {
             )
         }
 
-     showCaseAnalitycs()
+        showCaseAnalitycs()
     }
 
     private fun showCaseAnalitycs() {
-        MaterialShowcaseView.Builder(activity)
-            .setTarget(binding.camBtn)
-            .setDismissText("GOT IT")
-            .setContentText("This is for Analityc")
-            .setDelay(1000)
-            .singleUse(101.toString())
-            .show()
+
+        val config = ShowcaseConfig()
+        config.delay = 500
+        val sequence = MaterialShowcaseSequence(activity, SHOWCASE_ID)
+
+        sequence.setConfig(config)
+
+        sequence.addSequenceItem(
+            binding.camBtn,
+            "This is for get picture from camera to analityc", "GOT IT"
+        )
+
+        sequence.addSequenceItem(
+            binding.uploadBtn,
+            "This is for choose picture from gallery to analityc ", "GOT IT"
+        )
+
+        sequence.start()
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
