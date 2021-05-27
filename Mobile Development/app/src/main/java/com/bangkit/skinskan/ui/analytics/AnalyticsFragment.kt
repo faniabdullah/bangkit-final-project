@@ -8,7 +8,6 @@ import android.graphics.BitmapFactory
 import android.os.Bundle
 import android.provider.MediaStore
 import android.util.Base64
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -16,13 +15,12 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.bangkit.skinskan.databinding.FragmentAnalitycsBinding
 import com.bangkit.skinskan.ui.detail.DetailActivity
+import uk.co.deanwild.materialshowcaseview.MaterialShowcaseView
 import java.io.ByteArrayOutputStream
 import java.io.IOException
-import java.util.*
 
 
 class AnalyticsFragment : Fragment() {
-
     private lateinit var homeViewModel: AnalyticsViewModel
     private var _binding: FragmentAnalitycsBinding? = null
 
@@ -62,6 +60,14 @@ class AnalyticsFragment : Fragment() {
                 SELECT_PICTURE
             )
         }
+
+        MaterialShowcaseView.Builder(activity)
+            .setTarget(binding.camBtn)
+            .setDismissText("GOT IT")
+            .setContentText("This is for Analityc")
+            .setDelay(1000)
+            .singleUse(101.toString())
+            .show()
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -69,8 +75,8 @@ class AnalyticsFragment : Fragment() {
             val imageBitmap = data?.extras?.get("data") as Bitmap
             val intent = Intent(activity, DetailActivity::class.java)
             intent.putExtra("image", imageBitmap)
-            val resultCode = imageBitmap.toBase64String()
-            Log.e("result image as String", "= $resultCode")
+//            val resultCode = imageBitmap.toBase64String()
+//            Log.e("result image as String", "= $resultCode")
             startActivity(intent)
         } else if (requestCode == SELECT_PICTURE && resultCode == Activity.RESULT_OK) {
             val imageBitmap = data?.extras?.getParcelable<Bitmap>("data")
@@ -95,7 +101,7 @@ class AnalyticsFragment : Fragment() {
         ByteArrayOutputStream().apply {
             compress(Bitmap.CompressFormat.JPEG, 90, this)
             val b: ByteArray = toByteArray()
-            Log.e("result image as Array", "= " + Arrays.toString(b))
+//            Log.e("result image as Array", "= " + Arrays.toString(b))
             return Base64.encodeToString(toByteArray(), Base64.DEFAULT)
         }
     }
