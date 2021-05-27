@@ -40,6 +40,7 @@ class DetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         // [START storage_field_initialization]
         storage = Firebase.storage("gs://skinscanproject-capstone.appspot.com")
@@ -54,9 +55,9 @@ class DetailActivity : AppCompatActivity() {
             val storageRef = storage.reference
             val currentDateTime = LocalDateTime.now()
 
-            var imagesRef: StorageReference = storageRef.child(currentDateTime.toString())
+            val imagesRef: StorageReference = storageRef.child(currentDateTime.toString())
 
-            var photoRef = storageRef.child("image/skinskan.jpg")
+            val photoRef = storageRef.child("image/skinskan.jpg")
 
             imagesRef.name == photoRef.name
             imagesRef.path == photoRef.path
@@ -85,4 +86,8 @@ class DetailActivity : AppCompatActivity() {
     }
 
 
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
+    }
 }
