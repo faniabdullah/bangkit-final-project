@@ -39,8 +39,9 @@ class DetailActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityDetailBinding.inflate(layoutInflater)
-        setContentView(binding.root)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        setContentView(binding.root)
+
 
         // [START storage_field_initialization]
         storage = Firebase.storage("gs://skinscanproject-capstone.appspot.com")
