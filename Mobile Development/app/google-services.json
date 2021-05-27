@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "247009125865",
+    "project_id": "skinscanproject-capstone",
+    "storage_bucket": "skinscanproject-capstone.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:247009125865:android:acacae5a4dbbdd47aa5778",
+        "android_client_info": {
+          "package_name": "com.bangkit.skinskan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "247009125865-pc15gvgp8bm1m701u4hf275b9j3ei537.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsAk-Sm7915azF4jkxyFKhdekWRGa-hTU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "247009125865-pc15gvgp8bm1m701u4hf275b9j3ei537.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
