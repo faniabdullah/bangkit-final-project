@@ -42,6 +42,6 @@
 
   If you curious with this model, you can visit the colab: <br>
   skin_cancer_detection: <br> https://colab.research.google.com/drive/1EYhFL717FUyu_vZ7_Mmh0kJ_XZfzgVUe <br>
-  test_model (Here is the tested notebook, we tested the model with ~7-8 different datasets that listed on the notebook): <br> https://colab.research.google.com/drive/1pkckJod5uwbcDkVAgC16spk0MBV75usw <br>
+  test_model (Here is the tested notebook, we tested the model with ~7-8 different datasets that listed on the notebook): <br> https://colab.research.google.com/drive/1KTVuc6C1pwWszOA8qPJxG0XlBUlHJ8Gq <br>
   convert_datasets: <br> https://colab.research.google.com/drive/1LsXVGeixr3VzgMzpBS0bUAGg7uFoqBHA <br>
   convert_model: <br> https://colab.research.google.com/drive/1pkckJod5uwbcDkVAgC16spk0MBV75usw
