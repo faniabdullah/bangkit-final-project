@@ -1,0 +1,11 @@
+opencv-python==4.1.2.30
+matplotlib==3.2.2
+numpy==1.19.5
+seaborn==0.11.1
+pandas==1.1.5
+requests==2.23.0
+joblib==1.0.1
+Pillow==7.1.2
+scikit-learn==0.22.2.post1
+tensorflow==2.5.0
+imbalanced-learn==0.4.3
