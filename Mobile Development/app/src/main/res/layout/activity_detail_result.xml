@@ -37,7 +37,7 @@
         android:id="@+id/seeMoretBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:drawableEnd="@drawable/ic_baseline_arrow_right_alt_24"
+        android:drawableEnd="@drawable/ic_baseline_arrow_right_alt_white_24"
         android:drawablePadding="20dp"
         android:text="@string/see_more_result"
         android:translationZ="10dp"

@@ -8,41 +8,111 @@
 
 
     <Button
-        android:id="@+id/camBtn"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:drawableTop="@drawable/ic_baseline_camera_alt__white24"
-        android:padding="20dp"
-        android:text="@string/take_image"
-        android:elevation="20dp"
-        android:translationZ="20dp"
-        android:textAllCaps="false"
-        android:textColor="@color/black"
-        android:background="@drawable/rounded_corners"
+        android:id="@+id/uploadBtn"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.145"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.414" />
+        app:layout_constraintEnd_toEndOf="@+id/camBtn"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/camBtn"
+        app:layout_constraintTop_toBottomOf="@+id/camBtn"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/uploadBtn"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:drawableTop="@drawable/ic_baseline_image_24"
-        android:padding="20dp"
-        android:elevation="40dp"
-        android:translationZ="30dp"
-        android:background="@drawable/rounded_corners"
-        android:text="@string/upload_image"
-        android:textAllCaps="false"
-        android:textColor="@color/black"
+        android:id="@+id/camBtn"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.479"
-        app:layout_constraintStart_toEndOf="@+id/camBtn"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView2"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.414" />
-    />
+        app:layout_constraintVertical_bias="0.17000002">
+
+        <ImageView
+            android:id="@+id/imageAnalitics"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/avatar_1" />
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/buttonProcess"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/uploadBtn"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationLoading"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.24000001"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="upload_animation.json"
+        app:lottie_loop="true" />
+
+    <TextView
+        android:id="@+id/processShowCase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="20dp"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:text="@string/process"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonProcess"
+        app:layout_constraintEnd_toEndOf="@+id/buttonProcess"
+        app:layout_constraintStart_toStartOf="@+id/buttonProcess"
+        app:layout_constraintTop_toTopOf="@+id/buttonProcess" />
+
+    <TextView
+        android:id="@+id/choseImageShowCase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="20dp"
+
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:text="@string/upload_image"
+        app:layout_constraintBottom_toBottomOf="@+id/uploadBtn"
+        app:layout_constraintEnd_toEndOf="@+id/uploadBtn"
+        app:layout_constraintStart_toStartOf="@+id/uploadBtn"
+        app:layout_constraintTop_toTopOf="@+id/uploadBtn" />
+
+
+    <TextView
+        android:id="@+id/takeImageShowCase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="20dp"
+        android:textColor="@color/white"
+        android:textAllCaps="true"
+        android:text="@string/take_image"
+        app:layout_constraintBottom_toBottomOf="@+id/camBtn"
+        app:layout_constraintEnd_toEndOf="@+id/camBtn"
+        app:layout_constraintStart_toStartOf="@+id/camBtn"
+        app:layout_constraintTop_toTopOf="@+id/camBtn" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
