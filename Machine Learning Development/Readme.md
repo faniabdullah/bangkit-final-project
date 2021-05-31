@@ -1,47 +1,32 @@
-# Skin Cancer Detection:
+## SkinSkan Model 
 
-  Source Datasets: <br>
-  https://www.kaggle.com/kmader/skin-cancer-mnist-ham10000
-  <br>
- 
-  This datasets contains of 10000 picture of Skin disease with 7 Classes:
+Our project is based from Google Colab (due to limited system requirements of our laptop/PC).
 
-  | Name | Kind of Cancer |
-  |------------|------|
-  | Actinic keratoses | Benign |
-  | Basal cell carcinoma | Benign |
-  | Benign keratosis-like lesions| Benign |
-  | Dermatofibroma | Benign |
-  | Melanocytic nevi | Benign |
-  | Melanoma | Malignant | 
-  | Vascular lesion | Benign |
+Here some properties that we made for our model:
 
-  <br>
- 
-  with Melanoma is Malignant (Deadliest Cancer) and else is Benign (Not Deadliest Cancer)
-
-  but we divided it into only 2 Classes, Melanoma classify as Malignant and Actinic Keratoses, Basal Cell Carcinoma, Benign keratosis-like lesion, Dermatofibroma, Melanocytic Nevi and Vascular lession as Benign. here is the modified datasets: <br> https://drive.google.com/file/d/1-dOK_6g-Bkf8_SKcZKUwiCIj8TSqC7O5/view?usp=sharing <br>
-
-  so the label will be:<br>
-
-  | Name | Kind of Cancer | Label |
-  |------------|------|------|
-  | Actinic keratoses | Benign | 0 |
-  | Basal cell carcinoma | Benign | 0 |
-  | Benign keratosis-like lesions| Benign | 0 |
-  | Dermatofibroma | Benign | 0 |
-  | Melanocytic nevi | Benign | 0 |
-  | Melanoma | Malignant | 1 |
-  | Vascular lesion | Benign | 0|
-
-  <br>
+   - Here we using Machine Learning with Tensorflow as framework to Classify the skin disease (skin cancer).  
+   - Using transfer learning Xception to make model accuracy better. Then, we got circa 97% accuracy on training data and circa 90% on validation data
+   - Since this is only 2 classes, we supposed to be using BinaryClassification as loss, but here, we using SparseCategorical to make the result easy to understand and also readable (because with SparseCategorial we don't need to set the threshold, and can see percentage of Benign and Malignant because this loss turning the classification as array of each class) <br> 
+   - We use Adam optimizer with Custom Learning Rate (0.0001)
+   - We use transfer learning but we add more layer too to model Sequential:
+     -  added AveragePooling2D layer
+     -  added Flatten layer
+     -  added Dense layer with units=64 and ReLU activation function
+     -  added Dropout layer with units=0.05
+     -  added more Dense layer with units=16 and ReLU activation function
+     -  added output layer Dense with units=2 (since we use SparseCategorical as loss) and Sigmoid as activation function with kernel regularizer L2 with value=0.01
+  - We train with 20 epochs
+  - We set callbacks EarlyStopping to stop training when accuracy doesn't improve
+  - We set callbacks ModelCheckpoint to saved the model (also the weight) in every epochs with *.h5 format
   
-  Here we using Machine Learning with Tensorflow as framework to Classify the skin disease, here is the Saved Model (*.h5 format) with 98.02% Accuracy Score and 91.2% Val_Accuracy Score with using Xception transfer learning, Adam optimizer, and sigmoid activation function): <br> https://drive.google.com/file/d/1-0ODyEWBJcERmvXXM5Ejk_VoxV7gI6SW/view <br> but if you want the TensorFlow SavedModel here is the links: <br> https://drive.google.com/file/d/1-4cHcx5t7IUbJSJWOyMgK8WO-selZwB0/view?usp=sharing
+From the result, we got:
+- loss: 33%
+- accuracy: 97%
+- val_loss: 60%
+- val_accuracy: 89%
 
-<br>
+Then, we saved the model (*.h5 format) to Google Drive (We saved only the best model to Google Drive):<br>
+https://drive.google.com/file/d/1-0ODyEWBJcERmvXXM5Ejk_VoxV7gI6SW/view
 
-  If you curious with this model, you can visit the colab: <br>
-  skin_cancer_detection: <br> https://colab.research.google.com/drive/1EYhFL717FUyu_vZ7_Mmh0kJ_XZfzgVUe <br>
-  test_model (Here is the tested notebook, we tested the model with ~7-8 different datasets that listed on the notebook): <br> https://colab.research.google.com/drive/1KTVuc6C1pwWszOA8qPJxG0XlBUlHJ8Gq <br>
-  convert_datasets: <br> https://colab.research.google.com/drive/1LsXVGeixr3VzgMzpBS0bUAGg7uFoqBHA <br>
-  convert_model: <br> https://colab.research.google.com/drive/1pkckJod5uwbcDkVAgC16spk0MBV75usw
+Link to Colab: <br>
+https://colab.research.google.com/drive/1EYhFL717FUyu_vZ7_Mmh0kJ_XZfzgVUe
