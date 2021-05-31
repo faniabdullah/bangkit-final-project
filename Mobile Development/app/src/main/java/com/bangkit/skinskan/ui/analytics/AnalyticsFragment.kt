@@ -134,14 +134,21 @@ class AnalyticsFragment : Fragment() {
         sequence.setConfig(config)
 
         sequence.addSequenceItem(
-            binding.camBtn,
+            binding.takeImageShowCase,
             "This is for get picture from camera to analityc", "GOT IT"
         )
 
         sequence.addSequenceItem(
-            binding.uploadBtn,
+            binding.choseImageShowCase,
             "This is for choose picture from gallery to analityc ", "GOT IT"
         )
+
+
+        sequence.addSequenceItem(
+            binding.processShowCase,
+            "This is for process image ", "GOT IT"
+        )
+
         sequence.start()
     }
 
