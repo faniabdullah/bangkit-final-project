@@ -1,10 +1,14 @@
 package com.bangkit.skinskan.data
 
+import android.annotation.SuppressLint
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.bangkit.skinskan.data.source.local.entity.MapsEntity
+import com.bangkit.skinskan.data.source.local.entity.PredictionEntity
 import com.bangkit.skinskan.data.source.remote.RemoteDataSource
+import com.bangkit.skinskan.data.source.remote.response.ResultResponse
 import com.bangkit.skinskan.data.source.remote.response.ResultsItem
+import okhttp3.RequestBody
 
 class SkinScanRepository private constructor(private val remoteDataSource: RemoteDataSource) :
     ISkinScanRepository {
@@ -20,8 +24,11 @@ class SkinScanRepository private constructor(private val remoteDataSource: Remot
             }
     }
 
-    override fun getHospitalNearBy(latitude: String, longitude: String): LiveData<List<MapsEntity>> {
-        val movieResult = MutableLiveData<List<MapsEntity>>()
+    override fun getHospitalNearBy(
+        latitude: String,
+        longitude: String
+    ): LiveData<List<MapsEntity>> {
+        val hospitalResult = MutableLiveData<List<MapsEntity>>()
         remoteDataSource.getHospitalNearBy(
             latitude = latitude, longitude = longitude,
             callback = object : RemoteDataSource.LoadHospitalNearBy {
@@ -44,10 +51,31 @@ class SkinScanRepository private constructor(private val remoteDataSource: Remot
                             }
                         }
                     }
-                    movieResult.postValue(tvShowList)
+                    hospitalResult.postValue(tvShowList)
                 }
             })
 
-        return movieResult
+        return hospitalResult
+    }
+
+    override fun getPrediction(hashMap: HashMap<String, RequestBody>): LiveData<PredictionEntity> {
+        val predictionResult = MutableLiveData<PredictionEntity>()
+        remoteDataSource.getPrediction(
+            map = hashMap,
+            callback = object : RemoteDataSource.LoadPredictionCancer {
+                @SuppressLint("NullSafeMutableLiveData")
+                override fun onPredictionReceived(resultResponse: ResultResponse) {
+                    val hospital = resultResponse.predictionResult?.let {
+                        PredictionEntity(
+                            prediction = it
+                        )
+                    }
+                    if (hospital != null) {
+                        predictionResult.postValue(hospital)
+                    }
+                }
+            })
+
+        return predictionResult
     }
 }

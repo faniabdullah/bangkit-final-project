@@ -1,5 +1,3 @@
-@file:Suppress("DEPRECATION")
-
 package com.bangkit.skinskan.ui.nearby
 
 import android.Manifest
@@ -9,13 +7,13 @@ import android.location.Location
 import android.location.LocationListener
 import android.location.LocationManager
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.lifecycle.ViewModelProvider
 import com.bangkit.skinskan.R
 import com.bangkit.skinskan.data.source.local.entity.MapsEntity
 import com.bangkit.skinskan.databinding.ActivityDetailNearbyBinding
+import com.bangkit.skinskan.ui.detail.detail_result.DetailResultActivity
 import com.bangkit.skinskan.utils.ViewModelFactory
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
@@ -29,11 +27,24 @@ class NearByActivity : AppCompatActivity(), LocationListener {
     var mGoogleMap: GoogleMap? = null
     private lateinit var nearByViewModel: NearByViewModel
 
+    companion object {
+        const val RESULT_PREDICTION = "result_prediction"
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityDetailNearbyBinding.inflate(layoutInflater)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         setContentView(binding.root)
+        title = "More Result"
+        val prediction = intent.getStringExtra(DetailResultActivity.RESULT_PREDICTION)
+        if (prediction == "1") {
+            binding.resultNumber.text = "1"
+            binding.resultSub.text = getString(R.string.malignant)
+        } else {
+            binding.resultSub.text = getString(R.string.benign)
+            binding.resultNumber.text = prediction
+        }
 
         val fragment =
             supportFragmentManager.findFragmentById(R.id.fmap) as SupportMapFragment
@@ -80,11 +91,6 @@ class NearByActivity : AppCompatActivity(), LocationListener {
         val latLng = LatLng(mLatitude, mLongitude)
         mGoogleMap!!.moveCamera(CameraUpdateFactory.newLatLng(latLng))
         mGoogleMap!!.animateCamera(CameraUpdateFactory.zoomTo(12f))
-//        val sb = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?" +
-//                "location=" + mLatitude + "," + mLongitude +
-//                "&radius=20000" +
-//                "&types=hospital" +
-//                "&key=" + resources.getString(R.string.google_maps_key)
         setObserber(mLatitude, mLongitude)
     }
 
@@ -94,14 +100,12 @@ class NearByActivity : AppCompatActivity(), LocationListener {
 
         nearByViewModel.getHospitalNearBy(mLatitude.toString(), mLongitude.toString())
             .observe(this, {
-                    displayMarker(it)
+                displayMarker(it)
             })
     }
 
     private fun displayMarker(data: List<MapsEntity>) {
         mGoogleMap!!.clear()
-
-        Log.e("data","MARKER")
         for (response in data) {
             val markerOptions = MarkerOptions()
             val pinDrop =

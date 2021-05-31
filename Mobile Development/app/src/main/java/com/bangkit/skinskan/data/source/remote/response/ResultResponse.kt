@@ -1,4 +1,9 @@
 package com.bangkit.skinskan.data.source.remote.response
 
-class ResultResponse {
-}
+import com.google.gson.annotations.SerializedName
+
+
+data class ResultResponse(
+    @field:SerializedName("prediction")
+    val predictionResult: Int? = null,
+)
