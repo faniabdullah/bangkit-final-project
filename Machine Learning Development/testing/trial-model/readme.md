@@ -1,5 +1,7 @@
-# Trial Model of Skin Cancer Detection:
+# Trial Model of Skin Cancer Detection (Model Coba-Coba)
 
+## Here is the trial model of our early version of Skin Cancer Detection Model <br>
+ <br>
 Here is the trial model of our Skin Cancer Detection by using Deep Learning. In this folder, we put all of the model that we have try 
 
 There is 4 Method for Classification with using same datasets but with different processing of the datasets, here is the source of the datasets <br>
