@@ -24,7 +24,7 @@ https://colab.research.google.com/drive/1EYhFL717FUyu_vZ7_Mmh0kJ_XZfzgVUe
    - Using transfer learning Xception to make model accuracy better.
    - Use `SparseCategoricalCrossentropy` as loss
    - We use `Adam(learning_rate=1e-5)` as optimizer 
-   - We have used transfer learning but we add more layer too to model Sequential to make model accuracy more better:
+   - We have used transfer learning but we add more layer too to `model.Sequential` to make model accuracy more better:
      -  added `AveragePooling2D` layer
      -  added `Flatten` layer
      -  added `Dense(units=64, activation='relu')` layer 
@@ -35,10 +35,10 @@ https://colab.research.google.com/drive/1EYhFL717FUyu_vZ7_Mmh0kJ_XZfzgVUe
   - We set callbacks `EarlyStopping` to stop training when accuracy doesn't improve
   - We set callbacks `ModelCheckpoint` to saved the model (also the weight) in every epochs with *.h5 format  
   - From the result, we got:
-    - loss: 33%
-    - accuracy: 97%
-    - val_loss: 60%
-    - val_accuracy: 89%
+    - `loss: 33%`
+    - `accuracy: 97%`
+    - `val_loss: 60%`
+    - `val_accuracy: 89%`
 
 ## 4. Saved the Model to Google Drive
 
