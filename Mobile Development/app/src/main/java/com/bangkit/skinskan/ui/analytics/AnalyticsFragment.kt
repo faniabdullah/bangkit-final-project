@@ -149,19 +149,6 @@ class AnalyticsFragment : Fragment() {
         sequence.start()
     }
 
-    //    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-//        if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == Activity.RESULT_OK) {
-//            val imageBitmap = data?.extras?.get("data") as Bitmap
-//            val intent = Intent(activity, DetailActivity::class.java)
-//            intent.putExtra("image", imageBitmap)
-//            startActivity(intent)
-//        } else if (requestCode == SELECT_PICTURE && resultCode == Activity.RESULT_OK) {
-//            val imageBitmap = data?.extras?.getParcelable<Bitmap>("data")
-//            val intent = Intent(activity, DetailActivity::class.java)
-//            intent.putExtra("image", imageBitmap)
-//            startActivity(intent)
-//        }
-//    }
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         if (requestCode == REQUEST_TAKE_PHOTO || requestCode == REQUEST_PICK_PHOTO) {
             if (data != null) {

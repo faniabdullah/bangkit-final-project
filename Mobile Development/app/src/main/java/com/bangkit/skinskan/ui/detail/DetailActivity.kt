@@ -1,8 +1,6 @@
 package com.bangkit.skinskan.ui.detail
 
-import android.os.Build
 import android.os.Bundle
-import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import com.bangkit.skinskan.databinding.ActivityDetailBinding
 
@@ -16,7 +14,6 @@ class DetailActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         setContentView(binding.root)
     }
-
 
     override fun onSupportNavigateUp(): Boolean {
         onBackPressed()
