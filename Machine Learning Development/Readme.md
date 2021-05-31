@@ -28,7 +28,7 @@ https://colab.research.google.com/drive/1EYhFL717FUyu_vZ7_Mmh0kJ_XZfzgVUe
      -  added `AveragePooling2D` layer
      -  added `Flatten` layer
      -  added `Dense(units=64, activation='relu')` layer 
-     -  added 'Dropout(units=0.05)' layer
+     -  added `Dropout(units=0.05)` layer
      -  added more `Dense(units=16, activation='relu')` layer
      -  added output layer `Dense(units=2, activation='sigmoid' kernel_regularizer=l2(0.01))`
   - We train with 20 epochs
