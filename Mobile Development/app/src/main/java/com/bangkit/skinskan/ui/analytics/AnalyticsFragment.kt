@@ -1,13 +1,10 @@
 package com.bangkit.skinskan.ui.analytics
 
 import android.app.Activity
-import android.content.Context
 import android.content.Intent
 import android.graphics.Bitmap
-import android.graphics.BitmapFactory
 import android.os.Bundle
 import android.provider.MediaStore
-import android.util.Base64
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -17,8 +14,6 @@ import com.bangkit.skinskan.databinding.FragmentAnalitycsBinding
 import com.bangkit.skinskan.ui.detail.DetailActivity
 import uk.co.deanwild.materialshowcaseview.MaterialShowcaseSequence
 import uk.co.deanwild.materialshowcaseview.ShowcaseConfig
-import java.io.ByteArrayOutputStream
-import java.io.IOException
 
 
 class AnalyticsFragment : Fragment() {
@@ -67,7 +62,6 @@ class AnalyticsFragment : Fragment() {
     }
 
     private fun showCaseAnalitycs() {
-
         val config = ShowcaseConfig()
         config.delay = 500
         val sequence = MaterialShowcaseSequence(activity, SHOWCASE_ID)
@@ -83,7 +77,6 @@ class AnalyticsFragment : Fragment() {
             binding.uploadBtn,
             "This is for choose picture from gallery to analityc ", "GOT IT"
         )
-
         sequence.start()
     }
 
@@ -92,47 +85,12 @@ class AnalyticsFragment : Fragment() {
             val imageBitmap = data?.extras?.get("data") as Bitmap
             val intent = Intent(activity, DetailActivity::class.java)
             intent.putExtra("image", imageBitmap)
-//            val resultCode = imageBitmap.toBase64String()
-//            Log.e("result image as String", "= $resultCode")
             startActivity(intent)
         } else if (requestCode == SELECT_PICTURE && resultCode == Activity.RESULT_OK) {
             val imageBitmap = data?.extras?.getParcelable<Bitmap>("data")
             val intent = Intent(activity, DetailActivity::class.java)
             intent.putExtra("image", imageBitmap)
             startActivity(intent)
-        }
-    }
-
-
-    fun Context.assetsToBitmap(fileName: String): Bitmap? {
-        return try {
-            val stream = assets.open(fileName)
-            BitmapFactory.decodeStream(stream)
-        } catch (e: IOException) {
-            e.printStackTrace()
-            null
-        }
-    }
-
-    fun Bitmap.toBase64String(): String {
-        ByteArrayOutputStream().apply {
-            compress(Bitmap.CompressFormat.JPEG, 90, this)
-            val b: ByteArray = toByteArray()
-//            Log.e("result image as Array", "= " + Arrays.toString(b))
-            return Base64.encodeToString(toByteArray(), Base64.DEFAULT)
-        }
-    }
-
-    fun Bitmap.ToBase64Array(): ByteArray {
-        ByteArrayOutputStream().apply {
-            compress(Bitmap.CompressFormat.JPEG, 90, this)
-            return toByteArray()
-        }
-    }
-
-    fun String.toBitmap(): Bitmap? {
-        Base64.decode(this, Base64.DEFAULT).apply {
-            return BitmapFactory.decodeByteArray(this, 0, size)
         }
     }
 }

@@ -1,5 +1,3 @@
-@file:Suppress("DEPRECATION")
-
 package com.bangkit.skinskan.ui.nearby
 
 import android.Manifest
@@ -9,7 +7,6 @@ import android.location.Location
 import android.location.LocationListener
 import android.location.LocationManager
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.lifecycle.ViewModelProvider
@@ -80,11 +77,6 @@ class NearByActivity : AppCompatActivity(), LocationListener {
         val latLng = LatLng(mLatitude, mLongitude)
         mGoogleMap!!.moveCamera(CameraUpdateFactory.newLatLng(latLng))
         mGoogleMap!!.animateCamera(CameraUpdateFactory.zoomTo(12f))
-//        val sb = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?" +
-//                "location=" + mLatitude + "," + mLongitude +
-//                "&radius=20000" +
-//                "&types=hospital" +
-//                "&key=" + resources.getString(R.string.google_maps_key)
         setObserber(mLatitude, mLongitude)
     }
 
@@ -94,14 +86,12 @@ class NearByActivity : AppCompatActivity(), LocationListener {
 
         nearByViewModel.getHospitalNearBy(mLatitude.toString(), mLongitude.toString())
             .observe(this, {
-                    displayMarker(it)
+                displayMarker(it)
             })
     }
 
     private fun displayMarker(data: List<MapsEntity>) {
         mGoogleMap!!.clear()
-
-        Log.e("data","MARKER")
         for (response in data) {
             val markerOptions = MarkerOptions()
             val pinDrop =
