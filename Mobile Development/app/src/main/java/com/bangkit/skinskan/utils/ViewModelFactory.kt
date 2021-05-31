@@ -4,6 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.bangkit.skinskan.data.SkinScanRepository
 import com.bangkit.skinskan.di.Injection
+import com.bangkit.skinskan.ui.analytics.AnalyticsViewModel
 import com.bangkit.skinskan.ui.nearby.NearByViewModel
 
 class ViewModelFactory private constructor(private val mSkinScanRepository: SkinScanRepository) :
@@ -26,6 +27,9 @@ class ViewModelFactory private constructor(private val mSkinScanRepository: Skin
         return when {
             modelClass.isAssignableFrom(NearByViewModel::class.java) -> {
                 NearByViewModel(mSkinScanRepository) as T
+            }
+            modelClass.isAssignableFrom(AnalyticsViewModel::class.java) -> {
+                AnalyticsViewModel(mSkinScanRepository) as T
             }
 
             else -> throw Throwable("Unknown ViewModel class: " + modelClass.name)

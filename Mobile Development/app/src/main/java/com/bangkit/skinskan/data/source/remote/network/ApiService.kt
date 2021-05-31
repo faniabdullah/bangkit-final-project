@@ -20,6 +20,6 @@ interface ApiService {
     @Multipart
     @POST("/")
     fun getPrediction(
-        @PartMap map: Map<String?, RequestBody?>?
+        @PartMap map: HashMap<String, RequestBody>
     ): Call<ResultResponse>
 }

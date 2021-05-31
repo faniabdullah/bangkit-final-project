@@ -26,4 +26,5 @@ Ut vestibulum est sit amet commodo tempor. Phasellus consectetur nunc vel eros u
 Pellentesque posuere sit amet enim a vehicula. Suspendisse pretium ligula at est venenatis, sit amet scelerisque metus lobortis. Quisque eu scelerisque sapien, vel pretium dui. Pellentesque eu metus et arcu porttitor egestas. Donec vehicula nulla purus, eu tempor nibh facilisis et. Vivamus in sollicitudin leo, non auctor turpis. Suspendisse eu molestie turpis. Aenean augue mi, tempus ac convallis luctus, rutrum vel lorem. Nulla vitae luctus lacus.</string>
     <string name="author">author</string>
     <string name="article_date">Article Date</string>
+    <string name="upload">Upload</string>
 </resources>

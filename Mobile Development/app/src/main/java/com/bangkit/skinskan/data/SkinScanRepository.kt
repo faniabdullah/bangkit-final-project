@@ -58,7 +58,7 @@ class SkinScanRepository private constructor(private val remoteDataSource: Remot
         return hospitalResult
     }
 
-    override fun getPrediction(hashMap: HashMap<String?, RequestBody?>?): LiveData<PredictionEntity> {
+    override fun getPrediction(hashMap: HashMap<String, RequestBody>): LiveData<PredictionEntity> {
         val predictionResult = MutableLiveData<PredictionEntity>()
         remoteDataSource.getPrediction(
             map = hashMap,

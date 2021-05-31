@@ -8,5 +8,5 @@ import okhttp3.RequestBody
 
 interface ISkinScanRepository {
     fun getHospitalNearBy(latitude: String, longitude: String): LiveData<List<MapsEntity>>
-    fun getPrediction(hashMap: HashMap<String?, RequestBody?>?): LiveData<PredictionEntity>
+    fun getPrediction(hashMap: HashMap<String, RequestBody>): LiveData<PredictionEntity>
 }

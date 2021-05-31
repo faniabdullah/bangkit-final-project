@@ -1,13 +1,13 @@
 package com.bangkit.skinskan.ui.analytics
 
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.bangkit.skinskan.data.SkinScanRepository
+import com.bangkit.skinskan.data.source.local.entity.PredictionEntity
+import okhttp3.RequestBody
 
-class AnalyticsViewModel : ViewModel() {
+class AnalyticsViewModel(private val mSkinScanRepository: SkinScanRepository) : ViewModel() {
 
-    private val _text = MutableLiveData<String>().apply {
-        value = "This is Analytics Fragment"
-    }
-    val text: LiveData<String> = _text
+    fun getPrediction(hashMap: HashMap<String, RequestBody>): LiveData<PredictionEntity> =
+        mSkinScanRepository.getPrediction(hashMap)
 }

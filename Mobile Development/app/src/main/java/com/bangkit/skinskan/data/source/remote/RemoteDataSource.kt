@@ -50,7 +50,7 @@ class RemoteDataSource private constructor() {
 
     fun getPrediction(
         callback: LoadPredictionCancer,
-        map : HashMap<String?, RequestBody?>?
+        map: HashMap<String, RequestBody>
     ) {
         ApiConfig.getApiServiceImageUploader().getPrediction(map)
             .enqueue(object : Callback<ResultResponse> {
