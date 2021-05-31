@@ -35,7 +35,6 @@ class MainActivity : AppCompatActivity() {
         val navView: BottomNavigationView = binding.navView
 
         val navController = findNavController(R.id.nav_host_fragment_activity_main3)
-
         val appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.navigation_analitycs, R.id.navigation_articles,
