@@ -11,18 +11,12 @@ from PIL import Image
 
 from flask import Flask, request, jsonify
 
-model = keras.models.load_model("skinskanmodel.h5")
+    # Import model 
+model = keras.models.load_model("<your-model.h5>")
 
-
+    # Convert image to array
 def transform_image(img):
-    # data = np.asarray(pillow_image)
-    # data = data / 255.0
-    # data = data[np.newaxis, ..., np.newaxis]
-    # # --> [1, x, y, 1]
-    # data = tf.image.resize(data, [28, 28])
-    # return data
-    
-    
+     
     imgs = []
     img = img.resize((150,150))
     img = img_to_array(img)
@@ -33,18 +27,14 @@ def transform_image(img):
     
     return imgs
 
-
+    # Prediction function
 def predict(x):
-    # predictions = model(x)
-    # predictions = tf.nn.softmax(predictions)
-    # pred0 = predictions[0]
-    # label0 = np.argmax(pred0)
-    # return label0
 
     predictions = model(x)
     pred = np.argmax(predictions, axis=1)
     return pred
 
+    # Initialize Flask server with error handling
 app = Flask(__name__)
 
 @app.route("/", methods=["GET", "POST"])
