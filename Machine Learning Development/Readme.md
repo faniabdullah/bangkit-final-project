@@ -1,32 +1,46 @@
-## SkinSkan Model 
+# SkinSkan Model 
 
-Our project is based from Google Colab (due to limited system requirements of our laptop/PC).
-
-Here some properties that we made for our model:
-
-   - Here we using Machine Learning with Tensorflow as framework to Classify the skin disease (skin cancer).  
-   - Using transfer learning Xception to make model accuracy better. Then, we got circa 97% accuracy on training data and circa 90% on validation data
-   - Since this is only 2 classes, we supposed to be using BinaryClassification as loss, but here, we using SparseCategorical to make the result easy to understand and also readable (because with SparseCategorial we don't need to set the threshold, and can see percentage of Benign and Malignant because this loss turning the classification as array of each class) <br> 
-   - We use Adam optimizer with Custom Learning Rate (0.0001)
-   - We use transfer learning but we add more layer too to model Sequential:
-     -  added AveragePooling2D layer
-     -  added Flatten layer
-     -  added Dense layer with units=64 and ReLU activation function
-     -  added Dropout layer with units=0.05
-     -  added more Dense layer with units=16 and ReLU activation function
-     -  added output layer Dense with units=2 (since we use SparseCategorical as loss) and Sigmoid as activation function with kernel regularizer L2 with value=0.01
-  - We train with 20 epochs
-  - We set callbacks EarlyStopping to stop training when accuracy doesn't improve
-  - We set callbacks ModelCheckpoint to saved the model (also the weight) in every epochs with *.h5 format
-  
-From the result, we got:
-- loss: 33%
-- accuracy: 97%
-- val_loss: 60%
-- val_accuracy: 89%
-
-Then, we saved the model (*.h5 format) to Google Drive (We saved only the best model to Google Drive):<br>
-https://drive.google.com/file/d/1-0ODyEWBJcERmvXXM5Ejk_VoxV7gI6SW/view
+Our project is based from Google Colab (due to limited system requirements of our laptop/PC). Here we using Machine Learning with Tensorflow as framework to Classify the skin disease. 
 
 Link to Colab: <br>
 https://colab.research.google.com/drive/1EYhFL717FUyu_vZ7_Mmh0kJ_XZfzgVUe
+
+## 1. Load Datasets 
+  - Load Datasets from Modified dataset that we host to Google Drive, here is the link: <br> https://drive.google.com/file/d/1-dOK_6g-Bkf8_SKcZKUwiCIj8TSqC7O5/view?usp=sharing
+
+## 2. Pre-processing Datasets
+  - Defining target and feature from existing CSV file:
+    - `df['cell_type']` as target
+    - `df['img']` as feature
+  - Spliting datasets into:
+    - 80% of train data
+    - 5% of validation data
+    - 20% of test data
+  - Balancing datasets with `imblearn.over_sampling` module
+  - Resizing the datasets into 150x150 and convert it to numpy array
+
+## 3. Training
+
+   - Using transfer learning Xception to make model accuracy better.
+   - Use `SparseCategoricalCrossentropy` as loss
+   - We use `Adam(learning_rate=1e-5)` as optimizer 
+   - We have used transfer learning but we add more layer too to model Sequential to make model accuracy more better:
+     -  added `AveragePooling2D` layer
+     -  added `Flatten` layer
+     -  added `Dense(units=64, activation='relu')` layer 
+     -  added 'Dropout(units=0.05)' layer
+     -  added more `Dense(units=16, activation='relu')` layer
+     -  added output layer `Dense(units=2, activation='sigmoid' kernel_regularizer=l2(0.01))`
+  - We train with 20 epochs
+  - We set callbacks `EarlyStopping` to stop training when accuracy doesn't improve
+  - We set callbacks `ModelCheckpoint` to saved the model (also the weight) in every epochs with *.h5 format  
+  - From the result, we got:
+    - loss: 33%
+    - accuracy: 97%
+    - val_loss: 60%
+    - val_accuracy: 89%
+
+## 4. Saved the Model to Google Drive
+
+  - Then, we saved the model (*.h5 format) to Google Drive (We saved only the best model to Google Drive):<br>
+https://drive.google.com/file/d/1-0ODyEWBJcERmvXXM5Ejk_VoxV7gI6SW/view
