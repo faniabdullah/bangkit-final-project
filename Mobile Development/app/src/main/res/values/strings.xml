@@ -27,4 +27,6 @@ Pellentesque posuere sit amet enim a vehicula. Suspendisse pretium ligula at est
     <string name="author">author</string>
     <string name="article_date">Article Date</string>
     <string name="upload">Upload</string>
+    <string name="benign">Benign</string>
+    <string name="malignant">Malignant</string>
 </resources>

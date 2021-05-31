@@ -13,6 +13,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.bangkit.skinskan.R
 import com.bangkit.skinskan.data.source.local.entity.MapsEntity
 import com.bangkit.skinskan.databinding.ActivityDetailNearbyBinding
+import com.bangkit.skinskan.ui.detail.detail_result.DetailResultActivity
 import com.bangkit.skinskan.utils.ViewModelFactory
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
@@ -26,11 +27,24 @@ class NearByActivity : AppCompatActivity(), LocationListener {
     var mGoogleMap: GoogleMap? = null
     private lateinit var nearByViewModel: NearByViewModel
 
+    companion object {
+        const val RESULT_PREDICTION = "result_prediction"
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityDetailNearbyBinding.inflate(layoutInflater)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         setContentView(binding.root)
+        title = "More Result"
+        val prediction = intent.getStringExtra(DetailResultActivity.RESULT_PREDICTION)
+        if (prediction == "1") {
+            binding.resultNumber.text = "1"
+            binding.resultSub.text = getString(R.string.malignant)
+        } else {
+            binding.resultSub.text = getString(R.string.benign)
+            binding.resultNumber.text = prediction
+        }
 
         val fragment =
             supportFragmentManager.findFragmentById(R.id.fmap) as SupportMapFragment

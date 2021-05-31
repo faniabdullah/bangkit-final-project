@@ -17,6 +17,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.bangkit.skinskan.BuildConfig
 import com.bangkit.skinskan.databinding.FragmentAnalitycsBinding
+import com.bangkit.skinskan.ui.detail.detail_result.DetailResultActivity
 import com.bangkit.skinskan.utils.ViewModelFactory
 import com.bumptech.glide.Glide
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
@@ -57,9 +58,6 @@ class AnalyticsFragment : Fragment() {
         const val MEDIA_TYPE_IMAGE = 1
         private const val IMAGE_DIRECTORY_NAME = "Android File Upload"
 
-        /**
-         * returning image / video
-         */
         private fun getOutputMediaFile(type: Int): File? {
             // External sdcard location
             val mediaStorageDir = File(
@@ -67,8 +65,6 @@ class AnalyticsFragment : Fragment() {
                     .getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES),
                 IMAGE_DIRECTORY_NAME
             )
-
-            // Create the storage directory if it does not exist
             if (!mediaStorageDir.exists()) {
                 if (!mediaStorageDir.mkdirs()) {
                     Log.d(
@@ -152,7 +148,6 @@ class AnalyticsFragment : Fragment() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         if (requestCode == REQUEST_TAKE_PHOTO || requestCode == REQUEST_PICK_PHOTO) {
             if (data != null) {
-                // Get the Image from data
                 val selectedImage = data.data
                 val filePathColumn = arrayOf(MediaStore.Images.Media.DATA)
 
@@ -168,7 +163,6 @@ class AnalyticsFragment : Fragment() {
 
                 val columnIndex = cursor.getColumnIndex(filePathColumn[0])
                 mediaPath = cursor.getString(columnIndex)
-                // Set the Image in ImageView for Previewing the Media
                 binding.imageAnalitics.setImageBitmap(BitmapFactory.decodeFile(mediaPath))
                 cursor.close()
 
@@ -196,27 +190,18 @@ class AnalyticsFragment : Fragment() {
     internal fun createImageFile(): File {
         Logger.getAnonymousLogger().info("Generating the image - method started")
 
-        // Here we create a "non-collision file name", alternatively said, "an unique filename" using the "timeStamp" functionality
         val timeStamp = SimpleDateFormat("yyyyMMdd_HHmmSS").format(Date())
         val imageFileName = "IMAGE_" + timeStamp
-        // Here we specify the environment location and the exact path where we want to save the so-created file
         val storageDirectory =
             Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES + "/photo_saving_app")
         Logger.getAnonymousLogger().info("Storage directory set")
 
-        // Then we create the storage directory if does not exists
         if (!storageDirectory.exists()) storageDirectory.mkdir()
-
-        // Here we create the file using a prefix, a suffix and a directory
         val image = File(storageDirectory, imageFileName + ".jpg")
-        // File image = File.createTempFile(imageFileName, ".jpg", storageDirectory);
 
-        // Here the location is saved into the string mImageFileLocation
         Logger.getAnonymousLogger().info("File name and path set")
 
         mImageFileLocation = image.absolutePath
-        // fileUri = Uri.parse(mImageFileLocation);
-        // The file is returned to the previous intent across the camera application
         return image
     }
 
@@ -226,20 +211,15 @@ class AnalyticsFragment : Fragment() {
             val callCameraApplicationIntent = Intent()
             callCameraApplicationIntent.action = MediaStore.ACTION_IMAGE_CAPTURE
 
-            // We give some instruction to the intent to save the image
             var photoFile: File? = null
 
             try {
-                // If the createImageFile will be successful, the photo file will have the address of the file
                 photoFile = createImageFile()
-                // Here we call the function that will try to catch the exception made by the throw function
             } catch (e: IOException) {
                 Log.e("hello error found", " ms = " + e.message)
                 Logger.getAnonymousLogger().info("Exception error in generating the file")
                 e.printStackTrace()
             }
-
-            // Here we add an extra file to the intent to put the address on to. For this purpose we use the FileProvider, declared in the AndroidManifest.
             val outputUri = FileProvider.getUriForFile(
                 requireActivity(),
                 BuildConfig.APPLICATION_ID + ".provider",
@@ -247,12 +227,10 @@ class AnalyticsFragment : Fragment() {
             )
             callCameraApplicationIntent.putExtra(MediaStore.EXTRA_OUTPUT, outputUri)
 
-            // The following is a new line with a trying attempt
             callCameraApplicationIntent.addFlags(Intent.FLAG_GRANT_WRITE_URI_PERMISSION or Intent.FLAG_GRANT_READ_URI_PERMISSION)
 
             Logger.getAnonymousLogger().info("Calling the camera App by intent")
 
-            // The following strings calls the camera app and wait for his file in return.
             startActivityForResult(callCameraApplicationIntent, CAMERA_PIC_REQUEST)
         } else {
             val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
@@ -274,9 +252,10 @@ class AnalyticsFragment : Fragment() {
 
     private fun uploadFile() {
         if (postPath == null || postPath == "") {
-            Log.e("postPatah null", "null ")
+            Toast.makeText(activity, "image null ", Toast.LENGTH_SHORT).show()
             return
         } else {
+            loadingAnimation(true)
             val map = HashMap<String, RequestBody>()
             val file = File(postPath!!)
             val requestBody = file.asRequestBody("*/*".toMediaTypeOrNull())
@@ -285,13 +264,37 @@ class AnalyticsFragment : Fragment() {
             val factory = ViewModelFactory.getInstance()
             homeViewModel = ViewModelProvider(this, factory)[AnalyticsViewModel::class.java]
 
-
             activity?.let {
                 homeViewModel.getPrediction(map).observe(it, { prediction ->
+                    val intent = Intent(activity, DetailResultActivity::class.java)
                     Toast.makeText(activity, "prediction $prediction", Toast.LENGTH_SHORT).show()
+                    intent.putExtra(
+                        DetailResultActivity.RESULT_PREDICTION,
+                        prediction.prediction.toString()
+                    )
+                    startActivity(intent)
+                    loadingAnimation(false)
                 })
             }
+        }
+    }
 
+
+    private fun loadingAnimation(state: Boolean) {
+        if (state) {
+            binding.imageAnalitics.visibility = View.GONE
+            binding.uploadBtn.visibility = View.GONE
+            binding.buttonProcess.visibility = View.GONE
+            binding.camBtn.visibility = View.GONE
+            binding.cardView2.visibility = View.GONE
+            binding.animationLoading.visibility = View.VISIBLE
+        } else {
+            binding.imageAnalitics.visibility = View.VISIBLE
+            binding.uploadBtn.visibility = View.VISIBLE
+            binding.buttonProcess.visibility = View.VISIBLE
+            binding.camBtn.visibility = View.VISIBLE
+            binding.cardView2.visibility = View.VISIBLE
+            binding.animationLoading.visibility = View.GONE
         }
     }
 }
