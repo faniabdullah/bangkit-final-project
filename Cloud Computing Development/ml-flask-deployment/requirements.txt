@@ -1,6 +1,0 @@
-Flask
-gunicorn
-tensorflow
-numpy
-pillow
-matplotlib
