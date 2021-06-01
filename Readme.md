@@ -21,7 +21,7 @@
     <a href="https://github.com/faniabdullah/bangkit-final-project"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/faniabdullah/bangkit-final-projecte">View Demo</a>
+    <a href="https://github.com/faniabdullah/bangkit-final-project">View Demo</a>
     ·
     <a href="https://github.com/faniabdullah/bangkit-final-project/issues">Report Bug</a>
     ·
