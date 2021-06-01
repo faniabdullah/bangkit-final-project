@@ -16,7 +16,7 @@
   <h3 align="center">SkinSkan App </h3>
 
   <p align="center">
-    An awesome README template to jumpstart your projects!
+    Application that helps users to know how to help users examine their own bodies to detect early stage skin cancer.
     <br />
     <a href="https://github.com/faniabdullah/bangkit-final-project"><strong>Explore the docs »</strong></a>
     <br />
