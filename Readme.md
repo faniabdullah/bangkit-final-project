@@ -40,8 +40,9 @@
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
-        <li><a href="#mobile-learning-development-documentation">Machine Learning Development Documentation</a></li>
+        <li><a href="#machine-learning-development-documentation">Machine Learning Development Documentation</a></li>
         <li><a href="#mobile-development-documentation">Mobile Development Documentation</a></li>
+        <li><a href="#cloud-computing-documentation">Cloud Computing Documentation</a></li>
       </ul>
     </li>
     <li>
