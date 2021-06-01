@@ -17,13 +17,8 @@ cepat. </string>
     <string name="judul_article">Judul Article</string>
     <string name="sub_article">This cat suffered from skin cancer after he ate humans ..</string>
     <string name="_10_mins">10 mins</string>
-
     <string name="analytic">Analytic Result</string>
     <string name="berikut_rumah_sakit_terdekat_tools">Berikut Rumah Sakit Terdekat</string>
-
-    <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ornare sit amet turpis eget dignissim. Etiam commodo leo ac maximus vehicula. Duis condimentum laoreet tortor ut blandit. Aenean egestas eros eu placerat scelerisque. Phasellus non tempus diam. Integer mollis nibh aliquet nisl hendrerit iaculis. Maecenas felis lectus, aliquet id dui at, bibendum convallis libero.
-Ut vestibulum est sit amet commodo tempor. Phasellus consectetur nunc vel eros ultrices facilisis. Sed congue nibh at rutrum fringilla. Sed commodo, quam et accumsan molestie, nibh leo dapibus ligula, quis commodo elit orci eu eros. Pellentesque dolor tortor, tempor volutpat mauris sit amet, molestie lacinia tellus. Nullam cursus, lacus eu lobortis aliquam, nisl erat rhoncus nisi, vitae consectetur quam est vitae urna. Quisque luctus ante in arcu laoreet consectetur. Ut porttitor consectetur maximus. Proin tristique tellus id volutpat aliquet. Phasellus volutpat velit mattis risus pretium, non posuere elit fringilla. Nunc in magna viverra elit porta congue vel vel enim. Vivamus a iaculis risus. Sed congue turpis elit, vel scelerisque dolor viverra non. Sed pellentesque finibus condimentum.
-Pellentesque posuere sit amet enim a vehicula. Suspendisse pretium ligula at est venenatis, sit amet scelerisque metus lobortis. Quisque eu scelerisque sapien, vel pretium dui. Pellentesque eu metus et arcu porttitor egestas. Donec vehicula nulla purus, eu tempor nibh facilisis et. Vivamus in sollicitudin leo, non auctor turpis. Suspendisse eu molestie turpis. Aenean augue mi, tempus ac convallis luctus, rutrum vel lorem. Nulla vitae luctus lacus.</string>
     <string name="author">author</string>
     <string name="article_date">Article Date</string>
     <string name="upload">Upload</string>

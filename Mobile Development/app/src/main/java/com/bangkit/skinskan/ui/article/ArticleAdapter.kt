@@ -9,8 +9,6 @@ import com.bangkit.skinskan.data.source.local.entity.ArticleEntity
 import com.bangkit.skinskan.databinding.ItemRowArticlesBinding
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
-import com.bumptech.glide.request.RequestOptions
-import kotlin.random.Random
 
 
 class ArticleAdapter : RecyclerView.Adapter<ArticleAdapter.ArticleViewHolder>() {

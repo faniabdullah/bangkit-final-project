@@ -1,12 +1,12 @@
 package com.bangkit.skinskan.data.source.remote
 
 import android.util.Log
-import com.bangkit.skinskan.data.source.remote.response.ArticleResponse
-import com.bangkit.skinskan.utils.jsonHelper
 import com.bangkit.skinskan.data.source.remote.network.ApiConfig
+import com.bangkit.skinskan.data.source.remote.response.ArticleResponse
 import com.bangkit.skinskan.data.source.remote.response.ResponseMaps
 import com.bangkit.skinskan.data.source.remote.response.ResultResponse
 import com.bangkit.skinskan.data.source.remote.response.ResultsItem
+import com.bangkit.skinskan.utils.jsonHelper
 import okhttp3.RequestBody
 import retrofit2.Call
 import retrofit2.Callback
