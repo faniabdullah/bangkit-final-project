@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="16dp"
+    android:fitsSystemWindows="true"
     tools:context=".ui.article.ArticlesFragment">
 
 
@@ -12,5 +14,6 @@
         android:layout_height="match_parent"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="-16dp"
+        android:layout_marginBottom="50dp"
         tools:listitem="@layout/item_row_articles" />
 </androidx.constraintlayout.widget.ConstraintLayout>

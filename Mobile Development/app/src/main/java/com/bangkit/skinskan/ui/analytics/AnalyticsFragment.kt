@@ -268,7 +268,7 @@ class AnalyticsFragment : Fragment() {
             val requestBody = file.asRequestBody("*/*".toMediaTypeOrNull())
             map["file\"; filename=\"" + file.name + "\""] = requestBody
 
-            val factory = ViewModelFactory.getInstance()
+            val factory = ViewModelFactory.getInstance(requireContext())
             homeViewModel = ViewModelProvider(this, factory)[AnalyticsViewModel::class.java]
 
             activity?.let {

@@ -9,6 +9,7 @@ import com.bangkit.skinskan.data.source.local.entity.ArticleEntity
 import com.bangkit.skinskan.databinding.ItemRowArticlesBinding
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
+import com.bumptech.glide.request.RequestOptions
 import kotlin.random.Random
 
 
@@ -26,14 +27,6 @@ class ArticleAdapter : RecyclerView.Adapter<ArticleAdapter.ArticleViewHolder>() 
 
     inner class ArticleViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val binding = ItemRowArticlesBinding.bind(itemView)
-        private val mThumbIds = arrayOf<Int>(
-            R.drawable.avatar_1 , R.drawable.avatar_2,
-            R.drawable.avatar_3, R.drawable.avatar_10,
-            R.drawable.avatar_12, R.drawable.avatar_6,
-            R.drawable.avatar_4, R.drawable.avatar_5,
-            R.drawable.avatar_13, R.drawable.avatar_2
-        )
-        var indexToGetImageFrom = Random.nextInt(0,9)
         fun bind(article: ArticleEntity) {
             binding.apply {
 
@@ -41,7 +34,7 @@ class ArticleAdapter : RecyclerView.Adapter<ArticleAdapter.ArticleViewHolder>() 
                 subArtcile.text = article.description
                 timeArticle.text = article.release_date
                 Glide.with(itemView)
-                    .load(mThumbIds[indexToGetImageFrom])
+                    .load(article.imgPath)
                     .transition(DrawableTransitionOptions.withCrossFade())
                     .into(imageView)
             }
