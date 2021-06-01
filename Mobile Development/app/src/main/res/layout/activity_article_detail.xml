@@ -17,14 +17,17 @@
             android:layout_height="305dp"
             android:scaleType="fitXY"
             android:src="@drawable/avatar_1"/>
-
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_marginTop="200dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginBottom="80dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/shape"
+            android:layout_height="wrap_content">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="200dp"
-            android:layout_marginEnd="30dp"
-            android:background="@drawable/rectangle"
             android:orientation="vertical"
             android:padding="20dp">
 
@@ -62,7 +65,7 @@
 
 
         </LinearLayout>
-
+        </androidx.cardview.widget.CardView>
     </FrameLayout>
 
 

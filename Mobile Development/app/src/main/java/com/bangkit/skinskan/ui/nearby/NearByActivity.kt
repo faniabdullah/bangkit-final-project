@@ -13,7 +13,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.bangkit.skinskan.R
 import com.bangkit.skinskan.data.source.local.entity.MapsEntity
 import com.bangkit.skinskan.databinding.ActivityDetailNearbyBinding
-import com.bangkit.skinskan.ui.detail.detail_result.DetailResultActivity
+import com.bangkit.skinskan.ui.detail.DetailResultActivity
 import com.bangkit.skinskan.utils.ViewModelFactory
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap

@@ -18,6 +18,7 @@ class DetailArticle : AppCompatActivity() {
         binding = ActivityArticleDetailBinding.inflate(layoutInflater)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         setContentView(binding.root)
+        title = "Detail Artikel"
 
         val detailArticle = intent.getParcelableExtra<ArticleEntity>(EXTRA_DATA)
         populateDataArticle(detailArticle)
