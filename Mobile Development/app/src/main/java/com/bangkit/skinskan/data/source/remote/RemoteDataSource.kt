@@ -1,6 +1,8 @@
 package com.bangkit.skinskan.data.source.remote
 
 import android.util.Log
+import com.bangkit.faniabdullah_jetpack.data.source.remote.response.ArticleResponse
+import com.bangkit.faniabdullah_jetpack.utils.jsonHelper
 import com.bangkit.skinskan.data.source.remote.network.ApiConfig
 import com.bangkit.skinskan.data.source.remote.response.ResponseMaps
 import com.bangkit.skinskan.data.source.remote.response.ResultResponse
@@ -10,19 +12,33 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class RemoteDataSource private constructor() {
+class RemoteDataSource private constructor(private val jsonHelper: jsonHelper) {
+
+
     companion object {
+
         @Volatile
         private var instance: RemoteDataSource? = null
 
-        fun getInstance(): RemoteDataSource =
+        fun getInstance(helper: jsonHelper): RemoteDataSource =
             instance ?: synchronized(this) {
-                instance ?: RemoteDataSource().apply {
+                instance ?: RemoteDataSource(helper).apply {
                     instance = this
                 }
             }
     }
 
+    //Article
+    fun getAllArticles(callback: LoadArticleCallback) {
+        callback.onAllArticleReceived(jsonHelper.loadArticle())
+    }
+
+    interface LoadArticleCallback{
+        fun onAllArticleReceived(articleResponse: List<ArticleResponse>)
+}
+
+
+    //Hospitals
     fun getHospitalNearBy(
         callback: LoadHospitalNearBy,
         latitude: String,

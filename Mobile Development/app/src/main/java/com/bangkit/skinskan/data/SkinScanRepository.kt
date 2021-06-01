@@ -3,6 +3,8 @@ package com.bangkit.skinskan.data
 import android.annotation.SuppressLint
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import com.bangkit.faniabdullah_jetpack.data.source.remote.response.ArticleResponse
+import com.bangkit.skinskan.data.source.local.entity.ArticleEntity
 import com.bangkit.skinskan.data.source.local.entity.MapsEntity
 import com.bangkit.skinskan.data.source.local.entity.PredictionEntity
 import com.bangkit.skinskan.data.source.remote.RemoteDataSource
@@ -22,6 +24,29 @@ class SkinScanRepository private constructor(private val remoteDataSource: Remot
                     instance = this
                 }
             }
+    }
+
+    override fun getAllArticles(): LiveData<List<ArticleEntity>>{
+        val articleResult = MutableLiveData<List<ArticleEntity>>()
+        remoteDataSource.getAllArticles(object : RemoteDataSource.LoadArticleCallback {
+            override fun onAllArticleReceived(articleResponse: List<ArticleResponse>) {
+                val articleList = ArrayList<ArticleEntity>()
+                for (response in articleResponse) {
+                    val article = ArticleEntity(response.id,
+                        response.author,
+                        response.title,
+                        response.description,
+                        response.release_date,
+                        response.imgPath)
+
+                    articleList.add(article)
+                }
+                articleResult.postValue(articleList)
+            }
+        })
+
+
+        return articleResult
     }
 
     override fun getHospitalNearBy(

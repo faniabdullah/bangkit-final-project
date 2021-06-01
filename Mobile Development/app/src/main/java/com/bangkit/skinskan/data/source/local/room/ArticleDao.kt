@@ -5,5 +5,7 @@ import androidx.room.*
 @Dao
 interface ArticleDao {
 
+//    @Query("SELECT * FROM tb_article")
+//    fun getAllArticles():
 
 }
