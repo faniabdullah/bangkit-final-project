@@ -1,8 +1,8 @@
 package com.bangkit.skinskan.data.source.remote
 
 import android.util.Log
-import com.bangkit.faniabdullah_jetpack.data.source.remote.response.ArticleResponse
-import com.bangkit.faniabdullah_jetpack.utils.jsonHelper
+import com.bangkit.skinskan.data.source.remote.response.ArticleResponse
+import com.bangkit.skinskan.utils.jsonHelper
 import com.bangkit.skinskan.data.source.remote.network.ApiConfig
 import com.bangkit.skinskan.data.source.remote.response.ResponseMaps
 import com.bangkit.skinskan.data.source.remote.response.ResultResponse
