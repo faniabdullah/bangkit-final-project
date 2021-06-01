@@ -17,6 +17,7 @@
 
   <p align="center">
     Application that helps users to know how to help users examine their own bodies to detect early stage skin cancer.
+    This is a project to fulfill the [Bangkit Academy led by Google, Tokopedia, Gojek, & Traveloka](https://grow.google/intl/id_id/bangkit/) Program.
     <br />
     <a href="https://github.com/faniabdullah/bangkit-final-project"><strong>Explore the docs »</strong></a>
     <br />
