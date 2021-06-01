@@ -1,7 +1,6 @@
 package com.bangkit.skinskan.data
 
 import androidx.lifecycle.LiveData
-import com.bangkit.faniabdullah_jetpack.data.source.remote.response.ArticleResponse
 import com.bangkit.skinskan.data.source.local.entity.ArticleEntity
 import com.bangkit.skinskan.data.source.local.entity.MapsEntity
 import com.bangkit.skinskan.data.source.local.entity.PredictionEntity
