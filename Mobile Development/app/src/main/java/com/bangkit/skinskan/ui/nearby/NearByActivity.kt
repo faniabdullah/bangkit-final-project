@@ -95,7 +95,7 @@ class NearByActivity : AppCompatActivity(), LocationListener {
     }
 
     private fun setObserber(mLatitude: Double, mLongitude: Double) {
-        val factory = ViewModelFactory.getInstance()
+        val factory = ViewModelFactory.getInstance(this)
         nearByViewModel = ViewModelProvider(this, factory)[NearByViewModel::class.java]
 
         nearByViewModel.getHospitalNearBy(mLatitude.toString(), mLongitude.toString())

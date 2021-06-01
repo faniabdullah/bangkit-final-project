@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.article.ArticleDetailFragment">
+    tools:context=".ui.article.DetailArticle">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -12,7 +12,7 @@
         android:layout_height="wrap_content">
 
         <ImageView
-            android:id="@+id/articleIV"
+            android:id="@+id/imageView"
             android:layout_width="match_parent"
             android:layout_height="305dp"
             android:scaleType="fitXY"
@@ -28,7 +28,7 @@
             android:background="@drawable/rectangle">
 
             <TextView
-                android:id="@+id/tvTitle"
+                android:id="@+id/titleArticle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/title_articles"
@@ -46,7 +46,7 @@
                 android:textSize="18sp"/>
 
             <TextView
-                android:id="@+id/tvDate"
+                android:id="@+id/timeArticle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -54,7 +54,7 @@
             
             <TextView
                 android:id="@+id/tvContent"
-                android:layout_width="320dp"
+                android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/rectangle_gray"
                 android:text="@string/lorem"

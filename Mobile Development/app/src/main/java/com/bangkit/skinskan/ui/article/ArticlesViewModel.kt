@@ -2,11 +2,13 @@ package com.bangkit.skinskan.ui.article
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
+import com.bangkit.skinskan.data.SkinScanRepository
 import com.bangkit.skinskan.data.source.local.entity.ArticleEntity
 import com.bangkit.skinskan.utils.DataArticle
 
-class ArticlesViewModel : ViewModel() {
+class ArticlesViewModel(private val skinScanRepository: SkinScanRepository) : ViewModel() {
 
 
-    val resultArticle: List<ArticleEntity> = DataArticle.generateDummyArticle()
+    fun resultArticle(): LiveData<List<ArticleEntity>> = skinScanRepository.getAllArticles()
+
 }

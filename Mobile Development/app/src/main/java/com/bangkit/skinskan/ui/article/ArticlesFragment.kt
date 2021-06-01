@@ -10,10 +10,11 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bangkit.skinskan.data.source.local.entity.ArticleEntity
 import com.bangkit.skinskan.databinding.FragmentArticlesBinding
+import com.bangkit.skinskan.utils.ViewModelFactory
 
 class ArticlesFragment : Fragment() {
 
-    private lateinit var articleViewModel: ArticlesViewModel
+//    private lateinit var articleViewModel: ArticlesViewModel
     private var _binding: FragmentArticlesBinding? = null
     private lateinit var adapter: ArticleAdapter
 
@@ -24,8 +25,7 @@ class ArticlesFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        articleViewModel =
-            ViewModelProvider(this).get(ArticlesViewModel::class.java)
+
         _binding = FragmentArticlesBinding.inflate(inflater, container, false)
 
         return binding.root
@@ -34,27 +34,33 @@ class ArticlesFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        val factory = ViewModelFactory.getInstance(requireActivity())
+        val articleViewModel =
+            ViewModelProvider(this, factory)[ArticlesViewModel::class.java]
+
         adapter = ArticleAdapter()
-        adapter.notifyDataSetChanged()
+
+        articleViewModel.resultArticle().observe(viewLifecycleOwner, { articles ->
+            adapter.setList(articles)
+            adapter.notifyDataSetChanged()
+            adapter.setOnItemClickCallback(object : ArticleAdapter.OnItemClickCallback {
+                override fun onItemClicked(data: ArticleEntity) {
+                    showDetailFragment(data)
+                }
+            })
+        })
 
         binding.apply {
             rvArticle.layoutManager = LinearLayoutManager(context)
             rvArticle.setHasFixedSize(true)
             rvArticle.adapter = adapter
         }
-        articleViewModel = ViewModelProvider(this).get(ArticlesViewModel::class.java)
-        val dataArticle = articleViewModel.resultArticle
-        adapter.setList(dataArticle)
-        adapter.notifyDataSetChanged()
-        adapter.setOnItemClickCallback(object : ArticleAdapter.OnItemClickCallback {
-            override fun onItemClicked(data: ArticleEntity) {
-                showDetailFragment(data)
-            }
-        })
     }
 
     private fun showDetailFragment(data: ArticleEntity) {
         val intent = Intent(activity, DetailArticle::class.java)
+        intent.putExtra(DetailArticle.EXTRA_DATA, data)
         startActivity(intent)
     }
 
