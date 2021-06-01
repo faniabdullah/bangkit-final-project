@@ -1,6 +1,4 @@
 
-
-
 ## Mobile Development Documentation
 
 
@@ -56,3 +54,4 @@
   * [Android Jetpack Pro](https://developer.android.com/jetpack)
   * [Dependency injection](https://developer.android.com/training/dependency-injection)
   * [Lottie Animation AirBnb ](https://choosealicense.com)
+
