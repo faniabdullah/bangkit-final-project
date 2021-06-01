@@ -38,7 +38,7 @@
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
-        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#mobile-development-documentation">Mobile Development Documentation</a></li>
       </ul>
     </li>
     <li>
@@ -75,9 +75,27 @@ Of course, no one template will serve all projects since your needs may be diffe
 
 A list of commonly used resources that I find helpful are listed in the acknowledgements.
 
-### Built With
+<!-- Mobile Development Documentation -->
+## Mobile Development Documentation
 
-This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+
+ - ### Feature
+      * **Splash Screen**, in this application there is a splashscreen before entering the main page
+
+      * **Show Case**, there is a showcase feature for tutorials when you first use this application
+
+      * **Support Dark Mode**, You can change the dark / light theme on your smartphone, so this app can customize the dark / light theme by setting it on your smartphone.
+
+      * **Pick Image From Gallery**, You can select an image from the gallery in preparation for uploading an image to detect malignant or benign skin cancer.
+ 
+      * **Take Image From Camera**, You can take image from camera in preparation for uploading an image to detect malignant or benign skin cancer.
+
+      * **Send image to server to detect malignant or benign skin cancer kanker**, After you prepare the image, you can click the process button to send the image and detect the image is benign or malignant skin cancer
+
+     * **Find the nearest hospital**, You can see the nearest hospital from your location , This is useful for helping you find the nearest hospital in your location so that it is faster to get the first treatment / examination.
+
+     * **Aticle About Skin Cancer**,  in this application you can read articles about skin cancer
+
 
 * #### Dependencies :
   - [Lifecycle & Livedata](https://developer.android.com/jetpack/androidx/releases/lifecycle)
@@ -85,7 +103,35 @@ This section should list any major frameworks that you built your project using.
   - [kotlinx-coroutines](https://developer.android.com/kotlin/coroutines)    
   - [Retrofit 2](https://square.github.io/retrofit/)    
   - [Glide](https://github.com/bumptech/glide)    
-  - [SwipeRevealLayout](https://github.com/chthai64/SwipeRevealLayout)    
+  - [Material Show Case](https://github.com/deano2390/MaterialShowcaseView)  
+  - [Ok Http 3](https://square.github.io/okhttp/) 
+  - [Air Bnb Lottie](https://airbnb.io/lottie/#/) 
+  - [Google Play services Maps](https://developers.google.com/maps/documentation/android-sdk/get-api-key) 
+
+  ### Getting Started Application
+
+  - ### Prerequisites
+       - ##### Tools Sofware
+        1. Android Studio at least version 4.1. [Android Studio](https://developer.android.com/studio)
+        2. JRE (Java Runtime Environment) or JDK (Java Development Kit).
+  
+  - ### Installation
+      1. Get a free API Key at [Google Maps Platform](https://developers.google.com/maps/documentation/android-sdk/get-api-key)
+      2. Clone this repository and import into Android Studio    
+          ```
+             https://github.com/faniabdullah/bangkit-final-project.git
+          ``` 
+      4. Enter your API in buildConfigField `build.graddle`
+         ``` defaultConfig {
+            buildConfigField("String", "MAPS_TOKEN", '"Your Api Key"')}
+         ```
+  ## Acknowledgements
+  * [Clean Architecture Guide](https://developer.android.com/jetpack/guide)
+  * [Android Application Fundamental](https://developer.android.com/guide/components/fundamentals)
+  * [Android Jetpack Pro](https://developer.android.com/jetpack)
+  * [Dependency injection](https://developer.android.com/training/dependency-injection)
+  * [Lottie Animation AirBnb ](https://choosealicense.com)
+    
 
 
 
@@ -162,23 +208,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
-
-
-
-<!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Img Shields](https://shields.io)
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Pages](https://pages.github.com)
-* [Animate.css](https://daneden.github.io/animate.css)
-* [Loaders.css](https://connoratherton.com/loaders)
-* [Slick Carousel](https://kenwheeler.github.io/slick)
-* [Smooth Scroll](https://github.com/cferdinandi/smooth-scroll)
-* [Sticky Kit](http://leafo.net/sticky-kit)
-* [JVectorMap](http://jvectormap.com)
-* [Font Awesome](https://fontawesome.com)
+Project Link: [https://github.com/your_username/repo_name](https://github.com/faniabdullah/bangkit-final-project)
 
 
 
@@ -186,16 +216,16 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/faniabdullah/bangkit-final-project.svg?style=for-the-badge
+[contributors-url]: https://github.com/faniabdullah/bangkit-final-project/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/faniabdullah/bangkit-final-project.svg?style=for-the-badge
+[forks-url]: https://github.com/faniabdullah/bangkit-final-project/network/members
+[stars-shield]: https://img.shields.io/github/stars/faniabdullah/bangkit-final-project.svg?style=for-the-badge
+[stars-url]: https://github.com/faniabdullah/bangkit-final-project/stargazers
+[issues-shield]: https://img.shields.io/github/issues/faniabdullah/bangkit-final-project.svg?style=for-the-badge
+[issues-url]: https://github.com/faniabdullah/bangkit-final-project/issues
+[license-shield]: https://img.shields.io/github/license/faniabdullah/bangkit-final-project.svg?style=for-the-badge
+[license-url]: https://github.com/faniabdullah/bangkit-final-project/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: images/screenshot.png
+[linkedin-url]: 
+[product-screenshot]: 
