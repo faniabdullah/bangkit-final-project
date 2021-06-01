@@ -3,11 +3,11 @@ package com.bangkit.skinskan.data
 import android.annotation.SuppressLint
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.bangkit.skinskan.data.source.remote.response.ArticleResponse
 import com.bangkit.skinskan.data.source.local.entity.ArticleEntity
 import com.bangkit.skinskan.data.source.local.entity.MapsEntity
 import com.bangkit.skinskan.data.source.local.entity.PredictionEntity
 import com.bangkit.skinskan.data.source.remote.RemoteDataSource
+import com.bangkit.skinskan.data.source.remote.response.ArticleResponse
 import com.bangkit.skinskan.data.source.remote.response.ResultResponse
 import com.bangkit.skinskan.data.source.remote.response.ResultsItem
 import okhttp3.RequestBody

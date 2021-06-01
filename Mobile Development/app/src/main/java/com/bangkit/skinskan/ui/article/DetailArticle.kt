@@ -2,11 +2,8 @@ package com.bangkit.skinskan.ui.article
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.ViewModelProvider
-import com.bangkit.skinskan.R
 import com.bangkit.skinskan.data.source.local.entity.ArticleEntity
 import com.bangkit.skinskan.databinding.ActivityArticleDetailBinding
-import com.bangkit.skinskan.utils.ViewModelFactory
 import com.bumptech.glide.Glide
 
 class DetailArticle : AppCompatActivity() {
@@ -21,6 +18,7 @@ class DetailArticle : AppCompatActivity() {
         binding = ActivityArticleDetailBinding.inflate(layoutInflater)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         setContentView(binding.root)
+        title = "Detail Artikel"
 
         val detailArticle = intent.getParcelableExtra<ArticleEntity>(EXTRA_DATA)
         populateDataArticle(detailArticle)

@@ -17,7 +17,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.bangkit.skinskan.BuildConfig
 import com.bangkit.skinskan.databinding.FragmentAnalitycsBinding
-import com.bangkit.skinskan.ui.detail.detail_result.DetailResultActivity
+import com.bangkit.skinskan.ui.detail.DetailResultActivity
 import com.bangkit.skinskan.utils.ViewModelFactory
 import com.bumptech.glide.Glide
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
