@@ -1,21 +1,4 @@
 
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Thanks again! Now go create something AMAZING! :D
--->
-
-
-
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
@@ -24,15 +7,14 @@
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 
-
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="https://i.imgur.com/pcmroOL.png" width='500dp' alt="Logo" >
+    <img src="https://i.imgur.com/pcmroOL.png" width='400dp' alt="Logo" >
   </a>
 
-  <h3 align="center">Best-README-Template</h3>
+  <h3 align="center">SkinSkan App </h3>
 
   <p align="center">
     An awesome README template to jumpstart your projects!
@@ -97,9 +79,14 @@ A list of commonly used resources that I find helpful are listed in the acknowle
 ### Built With
 
 This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
-* [Laravel](https://laravel.com)
+
+* #### Dependencies :
+  - [Lifecycle & Livedata](https://developer.android.com/jetpack/androidx/releases/lifecycle)
+  - [Navigation Component](https://developer.android.com/jetpack/androidx/releases/navigation)
+  - [kotlinx-coroutines](https://developer.android.com/kotlin/coroutines)    
+  - [Retrofit 2](https://square.github.io/retrofit/)    
+  - [Glide](https://github.com/bumptech/glide)    
+  - [SwipeRevealLayout](https://github.com/chthai64/SwipeRevealLayout)    
 
 
 
@@ -119,7 +106,7 @@ This is an example of how to list things you need to use the software and how to
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
+1. Get a free API Key at [Google Maps Platform](https://developers.google.com/maps/documentation/android-sdk/get-api-key)
 2. Clone the repo
    ```sh
    git clone https://github.com/your_username_/Project-Name.git
