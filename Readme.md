@@ -17,7 +17,8 @@
 
   <p align="center">
     Application that helps users to know how to help users examine their own bodies to detect early stage skin cancer.
-    This is a project to fulfill the [Bangkit Academy led by Google, Tokopedia, Gojek, & Traveloka](https://grow.google/intl/id_id/bangkit/) Program.
+   This is a project to fulfill the  <a href="https://grow.google/intl/id_id/bangkit/"><strong>Bangkit Academy led by Google, Tokopedia, Gojek, & Traveloka »</strong></a>
+   Program.
     <br />
     <a href="https://github.com/faniabdullah/bangkit-final-project"><strong>Explore the docs »</strong></a>
     <br />
@@ -74,10 +75,10 @@ The project is based from Google Colab (due to limited system requirements of ou
 Link to Colab: <br>
 https://colab.research.google.com/drive/1EYhFL717FUyu_vZ7_Mmh0kJ_XZfzgVUe
 
-## 1. Load Datasets 
+- ## 1. Load Datasets 
   - Load Datasets from Modified dataset that we host to Google Drive, here is the link: <br> https://drive.google.com/file/d/1-dOK_6g-Bkf8_SKcZKUwiCIj8TSqC7O5/view?usp=sharing
 
-## 2. Pre-processing Datasets
+- ## 2. Pre-processing Datasets
   - Defining target and feature from existing CSV file:
     - `df['cell_type']` as target
     - `df['img']` as feature
@@ -88,7 +89,7 @@ https://colab.research.google.com/drive/1EYhFL717FUyu_vZ7_Mmh0kJ_XZfzgVUe
   - Balancing datasets with `imblearn.over_sampling` module
   - Resizing the datasets into 150x150 and convert it to numpy array
 
-## 3. Training
+- ## 3. Training
 
    - Using transfer learning Xception to make model accuracy better.
    - Using `SparseCategoricalCrossentropy` as loss
@@ -109,7 +110,7 @@ https://colab.research.google.com/drive/1EYhFL717FUyu_vZ7_Mmh0kJ_XZfzgVUe
     - `val_loss: 60%`
     - `val_accuracy: 89%`
 
-## 4. Saved the Model to Google Drive
+- ## 4. Saved the Model to Google Drive
 
   - Then, saved the model (*.h5 format) to Google Drive (saved only the best model to Google Drive):<br>
 https://drive.google.com/file/d/1-0ODyEWBJcERmvXXM5Ejk_VoxV7gI6SW/view
@@ -177,7 +178,31 @@ https://drive.google.com/file/d/1-0ODyEWBJcERmvXXM5Ejk_VoxV7gI6SW/view
   * [Lottie Animation AirBnb ](https://choosealicense.com)
     
 
+## Cloud Computing Documentation
 
+- ### 1. Write the Flask server app using Python
+  - Save the model in '.h5' format in the same directory as `main.py`
+  - Load the model and write Flask code in `main.py`
+  - Test the Flask server locally by running `main.py`, copy the assigned local URL to `test.py` then run it with test images.
+- ### 2. Setup Google Cloud
+  - Enable Cloud Run and Cloud Build API
+- ### 3. Install and init Google Cloud SDK
+  - https://cloud.google.com/sdk/docs/install
+
+- ### 4. Dockerfile, requirements.txt, .dockerignore
+  - https://cloud.google.com/run/docs/quickstarts/build-and-deploy#containerizing
+- ### 5. Cloud build & deploy
+    ```
+    gcloud builds submit --tag gcr.io/just-program-311914/cancerprediction
+    ```
+
+    ```
+    gcloud run deploy --image gcr.io/just-program-311914/cancerprediction --platform managed
+    ```
+
+- ### Test
+
+  - Test the code with `test/test.py` with the Cloud Build image URL
 
 <!-- GETTING STARTED -->
 ## Getting Started
