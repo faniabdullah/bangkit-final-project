@@ -28,7 +28,7 @@
         </activity>
         <activity android:name=".ui.article.DetailArticle" />
         <activity android:name=".ui.detail.DetailActivity" />
-        <activity android:name=".ui.detail.detail_result.DetailResultActivity" />
+        <activity android:name=".ui.detail.DetailResultActivity" />
         <activity android:name=".ui.nearby.NearByActivity" />
         <activity android:name=".MainActivity"/>
 

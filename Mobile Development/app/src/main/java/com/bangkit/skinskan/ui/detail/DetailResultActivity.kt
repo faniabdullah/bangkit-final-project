@@ -1,4 +1,4 @@
-package com.bangkit.skinskan.ui.detail.detail_result
+package com.bangkit.skinskan.ui.detail
 
 import android.content.Intent
 import android.os.Bundle

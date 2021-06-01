@@ -3,7 +3,6 @@ package com.bangkit.skinskan.data.source.local.room
 import androidx.room.Database
 import androidx.room.RoomDatabase
 import com.bangkit.skinskan.data.source.local.entity.ArticleEntity
-import com.bangkit.skinskan.data.source.local.room.ArticleDao
 
 @Database(entities = [ArticleEntity::class], version = 1, exportSchema = false)
 abstract class ArticleDatabase : RoomDatabase() {
