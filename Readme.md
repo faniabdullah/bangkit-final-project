@@ -256,8 +256,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 [Fani Abdullah ](https://www.linkedin.com/in/fani-abdullah/) - faniabdullah27@gmail.com
 
-Project Link: [https://github.com/faniabdullah/bangkit-final-project](https://github.com/faniabdullah/bangkit-final-project)
-
 
 
 
