@@ -9,8 +9,8 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="https://github.com/faniabdullah/bangkit-final-project/blob/d71868580ba4a2a0167567e2f46c20e4d3db8ab8/Logo/skin-skan-logo-darkbg_final.png" width='400dp' alt="Logo" >
+  <a href="https://github.com/faniabdullah/bangkit-final-project">
+    <img src="https://github.com/faniabdullah/bangkit-final-project/blob/d71868580ba4a2a0167567e2f46c20e4d3db8ab8/Logo/skinskan-logo-documentation.png" width='400dp' alt="Logo" >
   </a>
 
   <h3 align="center">SkinSkan App </h3>
