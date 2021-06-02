@@ -2,6 +2,7 @@ package com.bangkit.skinskan.ui.detail
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.bangkit.skinskan.R
 import com.bangkit.skinskan.databinding.ActivityDetailResultBinding
@@ -19,14 +20,15 @@ class DetailResultActivity : AppCompatActivity() {
         binding = ActivityDetailResultBinding.inflate(layoutInflater)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         setContentView(binding.root)
-        title = "Detail Result"
+        title = getString(R.string.title_detail)
+
         val prediction = intent.getStringExtra(RESULT_PREDICTION)
         if (prediction == "1") {
-            binding.resultNumber.text = "1"
-            binding.resultSub.text = getString(R.string.malignant)
+            binding.resultDanger.visibility = View.VISIBLE
+            binding.resultSub.visibility = View.GONE
         } else {
-            binding.resultSub.text = getString(R.string.benign)
-            binding.resultNumber.text = prediction
+            binding.resultDanger.visibility = View.GONE
+            binding.resultSub.visibility = View.VISIBLE
         }
 
         binding.seeMoretBtn.setOnClickListener {
