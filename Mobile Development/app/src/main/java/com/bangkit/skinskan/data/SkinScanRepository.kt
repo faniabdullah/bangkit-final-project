@@ -90,13 +90,13 @@ class SkinScanRepository private constructor(private val remoteDataSource: Remot
             callback = object : RemoteDataSource.LoadPredictionCancer {
                 @SuppressLint("NullSafeMutableLiveData")
                 override fun onPredictionReceived(resultResponse: ResultResponse) {
-                    val hospital = resultResponse.predictionResult?.let {
+                    val responseResultPrediction= resultResponse.predictionResult?.let {
                         PredictionEntity(
                             prediction = it
                         )
                     }
-                    if (hospital != null) {
-                        predictionResult.postValue(hospital)
+                    if (responseResultPrediction != null) {
+                        predictionResult.postValue(responseResultPrediction)
                     }
                 }
             })
