@@ -3,7 +3,6 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
 
 
 <!-- PROJECT LOGO -->
@@ -200,8 +199,28 @@ https://drive.google.com/file/d/1-0ODyEWBJcERmvXXM5Ejk_VoxV7gI6SW/view
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
+<p align="center"> 
+    <img src="https://media.giphy.com/media/jNCU8W4WuolTGeNHgP/giphy.gif"
+        alt="SplashScreen"    
+        style="margin-right: 10px;"    
+        width="150" />
+    <img src="https://media.giphy.com/media/k8Yp7JzdZkjlOEvRxQ/giphy.gif"
+        alt="Create Image"    
+        style="margin-right: 10px;"    
+        width="150" />
+    <img src="https://media.giphy.com/media/muOvgYcShlIwuMEdph/giphy.gif"
+        alt="Send Image"    
+        style="margin-right: 10px;"    
+        width="150" />
+    <img src="https://media.giphy.com/media/2fOFDiROVCK5eCMMLw/giphy.gif"
+        alt="Nearest Hospital"    
+        style="margin-right: 10px;"    
+        width="150" />
+    <img src="https://media.giphy.com/media/n8iBaoVwxexcsLgSXn/giphy.gif"
+        alt="Article"    
+        style="margin-right: 10px;"    
+        width="150" />
+</p>
 
 
 <!-- CONTRIBUTING -->
@@ -227,7 +246,15 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+[Fani Abdullah ](https://www.linkedin.com/in/fani-abdullah/) - faniabdullah27@gmail.com
+
+[Fani Abdullah ](https://www.linkedin.com/in/fani-abdullah/) - faniabdullah27@gmail.com
+
+[Fani Abdullah ](https://www.linkedin.com/in/fani-abdullah/) - faniabdullah27@gmail.com
+
+[Fani Abdullah ](https://www.linkedin.com/in/fani-abdullah/) - faniabdullah27@gmail.com
+
+[Fani Abdullah ](https://www.linkedin.com/in/fani-abdullah/) - faniabdullah27@gmail.com
 
 Project Link: [https://github.com/faniabdullah/bangkit-final-project](https://github.com/faniabdullah/bangkit-final-project)
 
@@ -248,5 +275,3 @@ Project Link: [https://github.com/faniabdullah/bangkit-final-project](https://gi
 [license-shield]: https://img.shields.io/github/license/faniabdullah/bangkit-final-project.svg?style=for-the-badge
 [license-url]: https://github.com/faniabdullah/bangkit-final-project/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: 
-[product-screenshot]: 
