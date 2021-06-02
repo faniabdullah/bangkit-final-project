@@ -28,7 +28,6 @@ class RemoteDataSource private constructor(private val jsonHelper: JsonHelper) {
             }
     }
 
-    //Article
     fun getAllArticles(callback: LoadArticleCallback) {
         callback.onAllArticleReceived(jsonHelper.loadArticle())
     }
@@ -38,7 +37,6 @@ class RemoteDataSource private constructor(private val jsonHelper: JsonHelper) {
 }
 
 
-    //Hospitals
     fun getHospitalNearBy(
         callback: LoadHospitalNearBy,
         latitude: String,
