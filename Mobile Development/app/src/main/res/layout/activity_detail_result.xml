@@ -11,25 +11,13 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="match_parent"
-        android:layout_height="220dp"
+        android:layout_height="100dp"
         android:background="@drawable/shape"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.390"
+        app:layout_constraintVertical_bias="0.45"
         tools:layout_editor_absoluteX="-8dp">
 
-        <TextView
-            android:id="@+id/resultNumber"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:elevation="20dp"
-            android:gravity="center_horizontal"
-            android:text="@string/resultin"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="100sp"
-            android:translationZ="10dp"
-            android:visibility="visible" />
 
     </androidx.cardview.widget.CardView>
 
@@ -43,26 +31,56 @@
         android:translationZ="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView"
-        app:layout_constraintVertical_bias="0.173" />
+        app:layout_constraintVertical_bias="0.078" />
 
     <TextView
         android:id="@+id/resultSub"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/resultsub"
-        android:textColor="@color/black"
-        android:textSize="48sp"
-        android:layout_marginTop="70dp"
+        android:text="@string/benign"
+        android:textColor="@android:color/holo_green_light"
+        android:textSize="40sp"
+        android:visibility="gone"
         android:textStyle="bold"
         android:translationZ="10dp"
         app:layout_constraintBottom_toBottomOf="@+id/cardView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.472"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/cardView" />
+        app:layout_constraintTop_toTopOf="@+id/cardView"
+        app:layout_constraintVertical_bias="0.42000002" />
+
+    <TextView
+        android:id="@+id/resultDanger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/malignant"
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        android:translationZ="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.472"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cardView"
+        app:layout_constraintVertical_bias="0.42000002" />
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hasil_prediksi_anda_berpotensi"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.937" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

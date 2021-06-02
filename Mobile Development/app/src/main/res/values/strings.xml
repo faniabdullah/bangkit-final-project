@@ -1,27 +1,22 @@
 <resources>
     <string name="app_name">SkinSkan</string>
     <string name="google_maps_key">AIzaSyCifPRSXYzjMsQJwSSsKunNGnGIQSQ0obc</string>
-    <string name="title_analitycs">Analityc</string>
-    <string name="title_articles">Article</string>
-    <string name="take_image">Take Image</string>
-    <string name="upload_image">Choose Image</string>
+    <string name="title_analitycs">Prediksi</string>
+    <string name="title_articles">Artikel </string>
+    <string name="title_detail">Detail Prediksi</string>
+    <string name="title_detail_article">Detail Artikel"</string>
+    <string name="take_image">Ambil Gambar</string>
+    <string name="upload_image">Pilih Gambar</string>
+
     <string name="test">test</string>
-    <string name="result">Result</string>
-    <string name="process">Process</string>
-    <string name="resultin">90%</string>
-    <string name="resultsub">Cancer</string>
-    <string name="see_more_result">see more result</string>
-    <string name="catatan">Catatan</string>
-    <string name="catatanSub">Kamu disarankan untuk segera ke rumah sakit , untuk memastikan dan mendapat perawatan pertama dengan
-cepat. </string>
-    <string name="judul_article">Judul Article</string>
-    <string name="sub_article">This cat suffered from skin cancer after he ate humans ..</string>
-    <string name="_10_mins">10 mins</string>
-    <string name="analytic">Analytic Result</string>
-    <string name="berikut_rumah_sakit_terdekat_tools">Berikut Rumah Sakit Terdekat</string>
-    <string name="author">author</string>
-    <string name="article_date">Article Date</string>
-    <string name="upload">Upload</string>
-    <string name="benign">Benign</string>
-    <string name="malignant">Malignant</string>
+    <string name="result">Hasil </string>
+    <string name="process">Unggah Gambar</string>
+    <string name="see_more_result">Lihat Hasil Lebih Lanjut</string>
+    <string name="noteNonDanger">Untuk mendapatkan informasi lebih lanjut , disarankan konsultasi ke dokter di rumah sakit terdekat </string>
+    <string name="noteDanger">Anda disarankan untuk konsultasi ke dokter untuk menghindari potensi kanker yang berbahaya</string>
+    <string name="hospital_nearby">Berikut lokasi rumah sakit terdekat</string>
+    <string name="benign">Tidak Berbahaya</string>
+    <string name="malignant">Berbahaya</string>
+    <string name="hasil_prediksi_anda_berpotensi">Hasil prediksi anda berpotensi:</string>
+
 </resources>

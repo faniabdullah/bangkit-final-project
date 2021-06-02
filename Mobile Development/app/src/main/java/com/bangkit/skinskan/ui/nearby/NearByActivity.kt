@@ -7,6 +7,7 @@ import android.location.Location
 import android.location.LocationListener
 import android.location.LocationManager
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.lifecycle.ViewModelProvider
@@ -36,14 +37,16 @@ class NearByActivity : AppCompatActivity(), LocationListener {
         binding = ActivityDetailNearbyBinding.inflate(layoutInflater)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         setContentView(binding.root)
-        title = "More Result"
+        title = getString(R.string.result)
         val prediction = intent.getStringExtra(DetailResultActivity.RESULT_PREDICTION)
         if (prediction == "1") {
-            binding.resultNumber.text = "1"
-            binding.resultSub.text = getString(R.string.malignant)
+            binding.resultDanger.visibility = View.VISIBLE
+            binding.resultSub.visibility = View.GONE
+            binding.note.text = getString(R.string.noteDanger)
         } else {
-            binding.resultSub.text = getString(R.string.benign)
-            binding.resultNumber.text = prediction
+            binding.resultDanger.visibility = View.GONE
+            binding.resultSub.visibility = View.VISIBLE
+            binding.note.text = getString(R.string.noteNonDanger)
         }
 
         val fragment =
