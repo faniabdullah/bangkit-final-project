@@ -39,7 +39,7 @@
         2. JRE (Java Runtime Environment) or JDK (Java Development Kit).
   
   - ### Installation
-      1. Get a free API Key at [Google Maps Platform](https://developers.google.com/maps/documentation/android-sdk/get-api-key)
+      1. Get an API Key at [Google Maps Platform](https://developers.google.com/maps/documentation/android-sdk/get-api-key)
       2. Clone this repository and import into Android Studio    
           ```
              https://github.com/faniabdullah/bangkit-final-project.git
