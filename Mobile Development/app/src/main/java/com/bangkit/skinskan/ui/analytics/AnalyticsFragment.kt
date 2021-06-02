@@ -135,18 +135,18 @@ class AnalyticsFragment : Fragment() {
 
         sequence.addSequenceItem(
             binding.takeImageShowCase,
-            "gunakan ini untuk mengambil gambar dari kamera", "IYA"
+            "gunakan ini untuk mengambil gambar dari kamera", "Mengerti"
         )
 
         sequence.addSequenceItem(
             binding.choseImageShowCase,
-            " pilih gambar dari kamera ", "IYA"
+            " pilih gambar dari kamera ", "Mengerti"
         )
 
 
         sequence.addSequenceItem(
             binding.processShowCase,
-            "unggah gambar untuk memprediksi ", "IYA"
+            "unggah gambar untuk memprediksi ", "Mengerti"
         )
 
         sequence.start()
