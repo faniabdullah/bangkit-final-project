@@ -1,5 +1,6 @@
 package com.bangkit.skinskan.ui.analytics
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.graphics.BitmapFactory
 import android.net.Uri
@@ -29,7 +30,6 @@ import java.io.File
 import java.io.IOException
 import java.text.SimpleDateFormat
 import java.util.*
-import java.util.logging.Logger
 import kotlin.collections.HashMap
 
 
@@ -71,7 +71,7 @@ class AnalyticsFragment : Fragment() {
                 }
             }
 
-            val timeStamp = SimpleDateFormat(
+            SimpleDateFormat(
                 "yyyyMMdd_HHmmss",
                 Locale.getDefault()
             ).format(Date())
@@ -187,20 +187,17 @@ class AnalyticsFragment : Fragment() {
         }
     }
 
+    @SuppressLint("SimpleDateFormat")
     @Throws(IOException::class)
     internal fun createImageFile(): File {
-        Logger.getAnonymousLogger().info("Generating the image - method started")
 
         val timeStamp = SimpleDateFormat("yyyyMMdd_HHmmSS").format(Date())
         val imageFileName = "IMAGE_" + timeStamp
         val storageDirectory =
             Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES + "/photo_saving_app")
-        Logger.getAnonymousLogger().info("Storage directory set")
 
         if (!storageDirectory.exists()) storageDirectory.mkdir()
         val image = File(storageDirectory, imageFileName + ".jpg")
-
-        Logger.getAnonymousLogger().info("File name and path set")
 
         mImageFileLocation = image.absolutePath
         return image
@@ -217,7 +214,7 @@ class AnalyticsFragment : Fragment() {
             try {
                 photoFile = createImageFile()
             } catch (e: IOException) {
-                Logger.getAnonymousLogger().info("Exception error in generating the file")
+
                 e.printStackTrace()
             }
             val outputUri = FileProvider.getUriForFile(
@@ -228,8 +225,6 @@ class AnalyticsFragment : Fragment() {
             callCameraApplicationIntent.putExtra(MediaStore.EXTRA_OUTPUT, outputUri)
 
             callCameraApplicationIntent.addFlags(Intent.FLAG_GRANT_WRITE_URI_PERMISSION or Intent.FLAG_GRANT_READ_URI_PERMISSION)
-
-            Logger.getAnonymousLogger().info("Calling the camera App by intent")
 
             startActivityForResult(callCameraApplicationIntent, CAMERA_PIC_REQUEST)
         } else {
