@@ -6,7 +6,7 @@ import org.json.JSONException
 import org.json.JSONObject
 import java.io.IOException
 
-class jsonHelper(private val context: Context) {
+class JsonHelper(private val context: Context) {
 
     private fun parsingFileToString(fileName: String): String? {
         return try {
