@@ -6,13 +6,13 @@ import com.bangkit.skinskan.data.source.remote.response.ArticleResponse
 import com.bangkit.skinskan.data.source.remote.response.ResponseMaps
 import com.bangkit.skinskan.data.source.remote.response.ResultResponse
 import com.bangkit.skinskan.data.source.remote.response.ResultsItem
-import com.bangkit.skinskan.utils.jsonHelper
+import com.bangkit.skinskan.utils.JsonHelper
 import okhttp3.RequestBody
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class RemoteDataSource private constructor(private val jsonHelper: jsonHelper) {
+class RemoteDataSource private constructor(private val jsonHelper: JsonHelper) {
 
 
     companion object {
@@ -20,7 +20,7 @@ class RemoteDataSource private constructor(private val jsonHelper: jsonHelper) {
         @Volatile
         private var instance: RemoteDataSource? = null
 
-        fun getInstance(helper: jsonHelper): RemoteDataSource =
+        fun getInstance(helper: JsonHelper): RemoteDataSource =
             instance ?: synchronized(this) {
                 instance ?: RemoteDataSource(helper).apply {
                     instance = this
@@ -28,7 +28,6 @@ class RemoteDataSource private constructor(private val jsonHelper: jsonHelper) {
             }
     }
 
-    //Article
     fun getAllArticles(callback: LoadArticleCallback) {
         callback.onAllArticleReceived(jsonHelper.loadArticle())
     }
@@ -38,7 +37,6 @@ class RemoteDataSource private constructor(private val jsonHelper: jsonHelper) {
 }
 
 
-    //Hospitals
     fun getHospitalNearBy(
         callback: LoadHospitalNearBy,
         latitude: String,
