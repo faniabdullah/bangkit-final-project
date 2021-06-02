@@ -172,14 +172,14 @@ class AnalyticsFragment : Fragment() {
 
 
         } else if (requestCode == CAMERA_PIC_REQUEST) {
-            if (Build.VERSION.SDK_INT > 21) {
+            postPath = if (Build.VERSION.SDK_INT > 21) {
 
                 Glide.with(this).load(mImageFileLocation).into(binding.imageAnalitics)
-                postPath = mImageFileLocation
+                mImageFileLocation
 
             } else {
                 Glide.with(this).load(fileUri).into(binding.imageAnalitics)
-                postPath = fileUri!!.path
+                fileUri!!.path
 
             }
 
@@ -195,7 +195,7 @@ class AnalyticsFragment : Fragment() {
             Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES + "/photo_saving_app")
 
         if (!storageDirectory.exists()) storageDirectory.mkdir()
-        val image = File(storageDirectory, imageFileName + ".jpg")
+        val image = File(storageDirectory, "$imageFileName.jpg")
 
         mImageFileLocation = image.absolutePath
         return image
