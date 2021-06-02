@@ -1,6 +1,5 @@
 package com.bangkit.skinskan.ui.analytics
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import android.graphics.BitmapFactory
 import android.net.Uri
@@ -187,7 +186,6 @@ class AnalyticsFragment : Fragment() {
         }
     }
 
-    @SuppressLint("SimpleDateFormat")
     @Throws(IOException::class)
     internal fun createImageFile(): File {
 
