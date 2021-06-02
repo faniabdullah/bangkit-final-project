@@ -37,9 +37,7 @@ class AnalyticsFragment : Fragment() {
     private lateinit var homeViewModel: AnalyticsViewModel
     private var _binding: FragmentAnalitycsBinding? = null
     private val binding get() = _binding as FragmentAnalitycsBinding
-
     private var fileUri: Uri? = null
-
     private var mediaPath: String? = null
     private var mImageFileLocation = ""
     private var postPath: String? = null
@@ -52,8 +50,6 @@ class AnalyticsFragment : Fragment() {
         const val CAMERA_PIC_REQUEST = 1111
 
         private val TAG = AnalyticsFragment::class.java.simpleName
-
-        const val CAMERA_CAPTURE_IMAGE_REQUEST_CODE = 100
 
         const val MEDIA_TYPE_IMAGE = 1
         private const val IMAGE_DIRECTORY_NAME = "Android File Upload"
@@ -123,10 +119,10 @@ class AnalyticsFragment : Fragment() {
             uploadFile()
         }
 
-        showCaseAnalitycs()
+        showCaseAnalytics()
     }
 
-    private fun showCaseAnalitycs() {
+    private fun showCaseAnalytics() {
         val config = ShowcaseConfig()
         config.delay = 500
         val sequence = MaterialShowcaseSequence(activity, SHOWCASE_ID)
@@ -172,8 +168,6 @@ class AnalyticsFragment : Fragment() {
                 mediaPath = cursor.getString(columnIndex)
                 binding.imageAnalitics.setImageBitmap(BitmapFactory.decodeFile(mediaPath))
                 cursor.close()
-
-
                 postPath = mediaPath
             }
 
@@ -213,8 +207,8 @@ class AnalyticsFragment : Fragment() {
     }
 
 
-    fun captureImage() {
-        if (Build.VERSION.SDK_INT > 21) { //use this if Lollipop_Mr1 (API 22) or above
+    private fun captureImage() {
+        if (Build.VERSION.SDK_INT > 21) {
             val callCameraApplicationIntent = Intent()
             callCameraApplicationIntent.action = MediaStore.ACTION_IMAGE_CAPTURE
 
@@ -223,7 +217,6 @@ class AnalyticsFragment : Fragment() {
             try {
                 photoFile = createImageFile()
             } catch (e: IOException) {
-                Log.e("hello error found", " ms = " + e.message)
                 Logger.getAnonymousLogger().info("Exception error in generating the file")
                 e.printStackTrace()
             }
@@ -252,7 +245,7 @@ class AnalyticsFragment : Fragment() {
 
     }
 
-    fun getOutputMediaFileUri(type: Int): Uri {
+    private fun getOutputMediaFileUri(type: Int): Uri {
         return Uri.fromFile(getOutputMediaFile(type))
     }
 
