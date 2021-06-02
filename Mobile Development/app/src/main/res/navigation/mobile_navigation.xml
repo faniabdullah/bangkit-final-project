@@ -17,11 +17,6 @@
         android:label="@string/title_articles"
         tools:layout="@layout/fragment_articles" />
     <fragment
-        android:id="@+id/detailFragment"
-        android:name="com.bangkit.skinskan.ui.detail.DetailActivity"
-        android:label="fragment_detail"
-        tools:layout="@layout/activity_detail" />
-    <fragment
         android:id="@+id/nearByFragment"
         android:name="com.bangkit.skinskan.ui.nearby.NearByActivity"
         android:label="fragment_detail_nearby"

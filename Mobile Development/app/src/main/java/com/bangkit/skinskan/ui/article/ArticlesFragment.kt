@@ -14,7 +14,6 @@ import com.bangkit.skinskan.utils.ViewModelFactory
 
 class ArticlesFragment : Fragment() {
 
-//    private lateinit var articleViewModel: ArticlesViewModel
     private var _binding: FragmentArticlesBinding? = null
     private lateinit var adapter: ArticleAdapter
 

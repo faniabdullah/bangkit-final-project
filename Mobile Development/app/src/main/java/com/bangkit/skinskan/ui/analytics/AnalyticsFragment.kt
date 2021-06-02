@@ -59,7 +59,7 @@ class AnalyticsFragment : Fragment() {
         private const val IMAGE_DIRECTORY_NAME = "Android File Upload"
 
         private fun getOutputMediaFile(type: Int): File? {
-            // External sdcard location
+
             val mediaStorageDir = File(
                 Environment
                     .getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES),
@@ -135,18 +135,18 @@ class AnalyticsFragment : Fragment() {
 
         sequence.addSequenceItem(
             binding.takeImageShowCase,
-            "This is for get picture from camera to analityc", "GOT IT"
+            "gunakan ini untuk mengambil gambar dari kamera", "IYA"
         )
 
         sequence.addSequenceItem(
             binding.choseImageShowCase,
-            "This is for choose picture from gallery to analityc ", "GOT IT"
+            " pilih gambar dari kamera ", "IYA"
         )
 
 
         sequence.addSequenceItem(
             binding.processShowCase,
-            "This is for process image ", "GOT IT"
+            "unggah gambar untuk memprediksi ", "IYA"
         )
 
         sequence.start()
