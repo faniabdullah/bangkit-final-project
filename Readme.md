@@ -246,17 +246,17 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-[Fani Abdullah ](https://www.linkedin.com/in/fani-abdullah/) - faniabdullah27@gmail.com
+[Rheivant Bosco Theoffilus ](https://www.linkedin.com/in/rheivant-bosco-theoffilus-1839991b8/) - rheivant4@gmail.com
 
 [Fani Abdullah ](https://www.linkedin.com/in/fani-abdullah/) - faniabdullah27@gmail.com
 
-[Fani Abdullah ](https://www.linkedin.com/in/fani-abdullah/) - faniabdullah27@gmail.com
+[Saharudin](https://www.linkedin.com/in/fani-abdullah/) -  saharudinsh98@gmail.com 
 
-[Fani Abdullah ](https://www.linkedin.com/in/fani-abdullah/) - faniabdullah27@gmail.com
+[Auzan Widhatama](https://www.linkedin.com/in/auzan-widhatama-7986ba16b/) -widhatamaauzan@gmail.com
 
-[Fani Abdullah ](https://www.linkedin.com/in/fani-abdullah/) - faniabdullah27@gmail.com
+[Muhammad Naufal  ](https://www.linkedin.com/in/muhammad-naufal-9745b2175/) - mnaufal0999@gmail.com
 
-
+[Imam Lutfi Rahmatullah  ](https://www.linkedin.com/in/imam-lutfi-r-27980711a/) - lutfi640@gmail.com
 
 
 
