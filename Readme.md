@@ -2,8 +2,7 @@
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/faniabdullah/bangkit-final-project/blob/master/LICENSE)
+[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/faniabdullah/bangkit-final-project/blob/master/LICENSE)
 
 <!-- PROJECT LOGO -->
 <br />
