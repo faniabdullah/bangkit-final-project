@@ -250,7 +250,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 [Fani Abdullah ](https://www.linkedin.com/in/fani-abdullah/) - faniabdullah27@gmail.com
 
-[Saharudin](https://www.linkedin.com/in/fani-abdullah/) -  saharudinsh98@gmail.com 
+[Saharudin](#) -  saharudinsh98@gmail.com 
 
 [Auzan Widhatama](https://www.linkedin.com/in/auzan-widhatama-7986ba16b/) -widhatamaauzan@gmail.com
 
