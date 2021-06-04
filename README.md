@@ -67,7 +67,7 @@ Link to Colab: <br>
 https://colab.research.google.com/drive/1EYhFL717FUyu_vZ7_Mmh0kJ_XZfzgVUe
 
 - ## 1. Load Datasets 
-  - Load Datasets from Modified dataset that we host to Google Drive, here is the link: <br> https://drive.google.com/file/d/1-dOK_6g-Bkf8_SKcZKUwiCIj8TSqC7O5/view?usp=sharing
+  - Load datasets from modified dataset that we host to Google Drive, here is the link: <br> https://drive.google.com/file/d/1-dOK_6g-Bkf8_SKcZKUwiCIj8TSqC7O5/view?usp=sharing
 
 - ## 2. Pre-processing Datasets
   - Defining target and feature from existing CSV file:
@@ -78,7 +78,7 @@ https://colab.research.google.com/drive/1EYhFL717FUyu_vZ7_Mmh0kJ_XZfzgVUe
     - 5% of validation data
     - 20% of test data
   - Balancing datasets with `imblearn.over_sampling` module
-  - Resizing the datasets into 150x150 and convert it to numpy array
+  - Resizing the datasets into 150 x 150 and convert it to numpy array
 
 - ## 3. Training
 
@@ -116,21 +116,21 @@ https://drive.google.com/file/d/1-0ODyEWBJcERmvXXM5Ejk_VoxV7gI6SW/view
 
 
  - ### Feature
-      * **Splash Screen**, in this application there is a splashscreen before entering the main page
+      * **Splash screen**, in this application there is a splashscreen before entering the main page
 
-      * **Show Case**, there is a showcase feature for tutorials when you first use this application
+      * **Show case**, there is showcase feature for guides when you first use this application
 
-      * **Support Dark Mode**, You can change the dark / light theme on your smartphone, so this app can customize the dark / light theme by setting it on your smartphone.
+      * **Support dark mode**, you can change the dark / light theme on your smartphone, so this app can customize the dark / light theme by setting it on your smartphone.
 
-      * **Pick Image From Gallery**, You can select an image from the gallery in preparation for uploading an image to detect malignant or benign skin cancer.
+      * **Pick image from gallery**, you can select an image from the gallery in preparation for uploading an image to detect malignant or benign skin cancer.
  
-      * **Take Image From Camera**, You can take image from camera in preparation for uploading an image to detect malignant or benign skin cancer.
+      * **Take an image from camera**, you can take image from camera in preparation for uploading an image to detect malignant or benign skin cancer.
 
-      * **Send image to server to detect malignant or benign skin cancer kanker**, After you prepare the image, you can click the process button to send the image and detect the image is benign or malignant skin cancer
+      * **Send image to the cloud to get prediction**, after you prepare the image, you can click the process button to send the image and detect the image is benign or malignant skin cancer
 
-     * **Find the nearest hospital**, You can see the nearest hospital from your location , This is useful for helping you find the nearest hospital in your location so that it is faster to get the first treatment / examination.
+     * **Find nearby hospitals**, You can see the nearest hospital from your location , This is useful for helping you find the nearest hospital in your location so that it is faster to get the first treatment / examination.
 
-     * **Aticle About Skin Cancer**,  in this application you can read articles about skin cancer
+     * **Skin cancer and skin care related article**,  in this application you can read articles about skin cancer
 
 
 * #### Dependencies :
