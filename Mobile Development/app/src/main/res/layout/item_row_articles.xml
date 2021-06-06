@@ -31,7 +31,6 @@
             android:ellipsize="end"
             android:maxLines="1"
             tools:text="Judul Article"
-            android:textColor="@color/black"
             android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
