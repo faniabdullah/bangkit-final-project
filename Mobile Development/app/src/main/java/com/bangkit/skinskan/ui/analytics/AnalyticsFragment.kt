@@ -281,6 +281,10 @@ class AnalyticsFragment : Fragment() {
             binding.camBtn.visibility = View.GONE
             binding.cardView2.visibility = View.GONE
             binding.animationLoading.visibility = View.VISIBLE
+
+            binding.takeImageShowCase.visibility = View.GONE
+            binding.processShowCase.visibility = View.GONE
+            binding.choseImageShowCase.visibility = View.GONE
         } else {
             binding.imageAnalitics.visibility = View.VISIBLE
             binding.uploadBtn.visibility = View.VISIBLE
@@ -288,6 +292,10 @@ class AnalyticsFragment : Fragment() {
             binding.camBtn.visibility = View.VISIBLE
             binding.cardView2.visibility = View.VISIBLE
             binding.animationLoading.visibility = View.GONE
+
+            binding.takeImageShowCase.visibility = View.VISIBLE
+            binding.processShowCase.visibility = View.VISIBLE
+            binding.choseImageShowCase.visibility = View.VISIBLE
         }
     }
 }
